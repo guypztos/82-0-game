@@ -1,0 +1,56 @@
+# Git hooks. Install once per clone with: make setup
+# Tools run through `uv run`, so hooks always use the versions pinned in uv.lock.
+default_install_hook_types: [pre-commit, pre-push]
+default_stages: [pre-commit]
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-toml
+      - id: check-json
+      - id: check-merge-conflict
+      - id: check-added-large-files
+      - id: debug-statements
+      - id: no-commit-to-branch
+        name: block direct commits to main
+        args: [--branch, main]
+
+  - repo: local
+    hooks:
+      - id: uv-lock
+        name: uv.lock is in sync with pyproject.toml
+        entry: uv lock --check
+        language: system
+        files: ^(pyproject\.toml|uv\.lock)$
+        pass_filenames: false
+
+      - id: ruff-check
+        name: ruff lint (with autofix)
+        entry: uv run ruff check --fix --exit-non-zero-on-fix
+        language: system
+        types_or: [python, pyi]
+
+      - id: ruff-format
+        name: ruff format
+        entry: uv run ruff format
+        language: system
+        types_or: [python, pyi]
+
+      - id: mypy
+        name: mypy (strict type check)
+        entry: uv run mypy
+        language: system
+        types_or: [python, pyi]
+        pass_filenames: false
+
+      - id: pytest
+        name: pytest (with coverage threshold)
+        entry: uv run pytest -q
+        language: system
+        stages: [pre-commit, pre-push]
+        pass_filenames: false
+        always_run: true

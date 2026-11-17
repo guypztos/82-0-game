@@ -1,0 +1,105 @@
+[project]
+name = "eighty-two-o"
+version = "0.1.0"
+description = "Draft an NBA lineup and simulate a season to see if it goes 82-0."
+readme = "README.md"
+authors = [
+    { name = "guypztos", email = "246836003+guypztos@users.noreply.github.com" }
+]
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+eighty-two-o = "eighty_two_o.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.13.8,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy>=2.4.1",
+    "pre-commit>=4.7.0",
+    "pytest>=9.2.0",
+    "pytest-cov>=7.1.0",
+    "ruff>=0.17.5",
+]
+
+# --- Formatting and linting -------------------------------------------------
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # pyflakes
+    "I",    # import sorting
+    "N",    # naming conventions
+    "UP",   # modern Python syntax
+    "B",    # likely bugs
+    "A",    # shadowing builtins
+    "C4",   # comprehensions
+    "SIM",  # simplifications
+    "RET",  # return statements
+    "ARG",  # unused arguments
+    "PTH",  # pathlib over os.path
+    "PT",   # pytest style
+    "ANN",  # every function must be annotated
+    "D",    # docstrings
+    "ERA",  # commented-out code
+    "RUF",  # ruff-specific rules
+]
+ignore = [
+    "D203",  # conflicts with D211 (no blank line before class docstring)
+    "D213",  # conflicts with D212 (summary on the first docstring line)
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = [
+    "D",  # test names describe themselves; docstrings are optional
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.isort]
+known-first-party = ["eighty_two_o"]
+
+# --- Type checking ----------------------------------------------------------
+
+[tool.mypy]
+python_version = "3.13"
+files = ["src", "tests"]
+strict = true
+warn_unreachable = true
+enable_error_code = ["ignore-without-code", "redundant-expr", "truthy-bool"]
+
+# --- Tests ------------------------------------------------------------------
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = [
+    "--strict-markers",
+    "--strict-config",
+    "--cov=eighty_two_o",
+    "--cov-report=term-missing",
+]
+xfail_strict = true
+
+[tool.coverage.run]
+branch = true
+source = ["eighty_two_o"]
+
+[tool.coverage.report]
+fail_under = 90
+show_missing = true
+skip_covered = true
+exclude_also = [
+    "if TYPE_CHECKING:",
+    "if __name__ == .__main__.:",
+    "raise NotImplementedError",
+]

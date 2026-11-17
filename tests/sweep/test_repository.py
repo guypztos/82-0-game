@@ -206,6 +206,40 @@ class TestBundledData:
             "Fernando Alonso",
         ]
 
+    def test_career_is_one_rating_per_driver(self, sweep_dataset: SweepDataset) -> None:
+        seasons: dict[str, list[float]] = {}
+        careers: dict[str, set[float]] = {}
+        for d in sweep_dataset.drivers:
+            seasons.setdefault(d.driver_id, []).append(d.rating)
+            careers.setdefault(d.driver_id, set()).add(d.career)
+        assert all(len(values) == 1 for values in careers.values())
+        for driver, values in seasons.items():
+            best_three = statistics.fmean(sorted(values, reverse=True)[:3])
+            assert next(iter(careers[driver])) >= best_three - 0.002
+
+    @pytest.mark.parametrize(
+        ("driver_id", "expected"),
+        [
+            ("ayrton-senna", 2.8),
+            ("lewis-hamilton", 2.8),
+            ("michael-schumacher", 2.8),
+            ("max-verstappen", 2.8),
+            ("alain-prost", 2.2),
+            ("fernando-alonso", 2.2),
+            ("nelson-piquet", 1.6),
+            ("jenson-button", 1.1),
+            ("gerhard-berger", 0.635),
+            ("valtteri-bottas", 0.092),
+            ("sergio-perez", -0.048),
+        ],
+    )
+    def test_pinned_careers(
+        self, sweep_dataset: SweepDataset, driver_id: str, expected: float
+    ) -> None:
+        card = next(d for d in sweep_dataset.drivers if d.driver_id == driver_id)
+
+        assert card.career == pytest.approx(expected, abs=TOLERANCE)
+
     def test_facts(self, sweep_dataset: SweepDataset) -> None:
         williams = sweep_dataset.car("williams:1992")
         assert (williams.wins, williams.poles, williams.podiums) == (10, 15, 21)

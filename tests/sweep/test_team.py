@@ -74,7 +74,14 @@ def test_pinned_part_ratings(
 
 @pytest.mark.parametrize(
     ("card_id", "expected"),
-    [("max-verstappen:2025:red-bull", 98), ("sergio-perez:2023:red-bull", 52)],
+    [
+        ("max-verstappen:2025:red-bull", 95),
+        ("lewis-hamilton:2021:mercedes", 95),
+        ("ayrton-senna:1991:mclaren", 95),
+        ("alain-prost:1985:mclaren", 88),
+        ("nelson-piquet:1983:brabham", 80),
+        ("sergio-perez:2023:red-bull", 59),
+    ],
 )
 def test_pinned_driver_ratings(sweep_dataset: SweepDataset, card_id: str, expected: int) -> None:
-    assert display_rating(Slot.DRIVER, sweep_dataset.driver(card_id).rating) == expected
+    assert display_rating(Slot.DRIVER, sweep_dataset.driver(card_id).career) == expected

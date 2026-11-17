@@ -58,6 +58,10 @@ PIT_Z_CAP = 2.0
 PIT_SLOW_STOP_SECONDS = 15.0
 PIT_MIN_RACES = 5
 PIT_MIN_TEAMS = 5
+CAREER_SEASONS = 3
+"""A driver's career rating is the mean of his best this-many season ratings."""
+POLL_FLOORS = ((5, 2.8), (15, 2.2), (30, 1.6), (50, 1.1))
+"""(last poll rank of a tier, the lowest career rating a driver in that tier can have)."""
 
 NOT_STARTED = frozenset({"DNQ", "DNPQ", "DNS", "DNP", "EX"})
 INCIDENT_REASONS = frozenset(
@@ -163,6 +167,7 @@ DRIVER_COLUMNS = (
     "year",
     "constructor_id",
     "rating",
+    "career",
     "incident",
     "starts",
     "wins",
@@ -176,6 +181,7 @@ ROOT = Path(__file__).resolve().parent.parent
 CACHE_DIR = ROOT / ".cache" / f"f1db-{RELEASE}"
 OUTPUT_DIR = ROOT / "src" / "eighty_two_o" / "sweep"
 CORRECTIONS_FILE = Path(__file__).resolve().parent / "sweep_corrections.csv"
+TIERS_FILE = Path(__file__).resolve().parent / "sweep_driver_tiers.csv"
 
 type Row = Mapping[str, str]
 type Tables = Mapping[str, Sequence[Row]]
@@ -226,6 +232,78 @@ def parse_corrections(rows: Iterable[Row]) -> list[Correction]:
     if twice:
         raise DataError(f"engine-seasons corrected more than once: {twice}")
     return corrections
+
+
+@dataclass(frozen=True)
+class Tier:
+    """A driver's place in a published ranking of the greatest (here: quickest) drivers."""
+
+    driver_id: str
+    rank: int
+    source: str
+    note: str
+
+
+def parse_tiers(rows: Iterable[Row]) -> list[Tier]:
+    """Read poll rows (``driver_id, rank, source, note``).
+
+    Args:
+        rows: Rows of the driver tiers CSV.
+
+    Returns:
+        The poll places.
+
+    Raises:
+        DataError: If a driver is listed twice or a rank is below 1.
+    """
+    tiers = [Tier(row["driver_id"], int(row["rank"]), row["source"], row["note"]) for row in rows]
+    twice = [d for d, n in Counter(t.driver_id for t in tiers).items() if n > 1]
+    if twice:
+        raise DataError(f"drivers listed more than once: {twice}")
+    if any(t.rank < 1 for t in tiers):
+        raise DataError("poll ranks start at 1")
+    return tiers
+
+
+def poll_floor(rank: int) -> float:
+    """The lowest career rating for a driver at this poll rank.
+
+    Args:
+        rank: The driver's place in the poll.
+
+    Returns:
+        The floor of his tier, or minus infinity below the last tier.
+    """
+    return next((floor for last, floor in POLL_FLOORS if rank <= last), float("-inf"))
+
+
+def career_ratings(drivers: Iterable[OutputRow], tiers: Sequence[Tier]) -> dict[str, float]:
+    """Give every driver one rating for all his cards: his best level, raised by the poll.
+
+    Args:
+        drivers: Driver rows with their season ``rating``.
+        tiers: Poll places (report-based corrections).
+
+    Returns:
+        Career rating by driver id: the mean of his best ``CAREER_SEASONS`` season ratings,
+        or his poll tier's floor if that is higher.
+
+    Raises:
+        DataError: If a poll row names a driver who has no card.
+    """
+    seasons: dict[str, list[float]] = defaultdict(list)
+    for row in drivers:
+        seasons[row["driver_id"]].append(float(row["rating"]))
+    career = {
+        driver: statistics.fmean(sorted(values, reverse=True)[:CAREER_SEASONS])
+        for driver, values in seasons.items()
+    }
+    unknown = [t.driver_id for t in tiers if t.driver_id not in career]
+    if unknown:
+        raise DataError(f"poll rows match no driver: {unknown}")
+    for tier in tiers:
+        career[tier.driver_id] = max(career[tier.driver_id], poll_floor(tier.rank))
+    return career
 
 
 def _year(row: Row) -> int:
@@ -704,13 +782,17 @@ def _positions(rows: Iterable[Row], id_column: str) -> dict[tuple[str, int], int
 
 
 def build(
-    tables: Tables, corrections: Sequence[Correction], iterations: int = ITERATIONS
+    tables: Tables,
+    corrections: Sequence[Correction],
+    tiers: Sequence[Tier] = (),
+    iterations: int = ITERATIONS,
 ) -> tuple[list[OutputRow], list[OutputRow]]:
     """Turn the F1DB tables into the bundled car and driver rows.
 
     Args:
         tables: Source rows by the keys of ``TABLE_FILES``.
         corrections: Report-based engine adjustments.
+        tiers: Poll places that raise drivers' career ratings.
         iterations: Gradient steps of the strength fit.
 
     Returns:
@@ -793,6 +875,7 @@ def build(
                     "year": str(year),
                     "constructor_id": constructor,
                     "rating": _f(drivers[(driver, year)]),
+                    "career": "",  # filled in below, once every season is known
                     "incident": _f(incidents[driver]),
                     "starts": str(t.driver_starts[seat]),
                     "wins": str(t.driver_wins[seat]),
@@ -804,6 +887,9 @@ def build(
                     "main": _flag(index < 2),
                 }
             )
+    career = career_ratings(driver_rows, tiers)
+    for row in driver_rows:
+        row["career"] = _f(career[row["driver_id"]])
     return car_rows, driver_rows
 
 
@@ -948,7 +1034,9 @@ def main(argv: Sequence[str] | None = None) -> None:
     check_sources(tables)
     with CORRECTIONS_FILE.open(encoding="utf-8", newline="") as file:
         corrections = parse_corrections(csv.DictReader(file))
-    cars, drivers = build(tables, corrections)
+    with TIERS_FILE.open(encoding="utf-8", newline="") as file:
+        tiers = parse_tiers(csv.DictReader(file))
+    cars, drivers = build(tables, corrections, tiers)
     validate(cars, drivers)
     check_expected(cars, drivers)
     _write(args.output / "cars.csv", CAR_COLUMNS, cars)

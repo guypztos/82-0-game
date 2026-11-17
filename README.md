@@ -81,11 +81,18 @@ strength of the driver, measured against the average of that season. Then:
 - **Pit crew**: pit-stop times against the rest of the field (timing starts in 1994; earlier
   crews are rated average).
 - **Reliability**: mechanical retirements against the average of the era.
+- **Drivers**: one career rating per driver, whichever season you roll: the average of his
+  three best seasons, raised to a floor for drivers in a published ranking of the quickest
+  drivers ever (Autosport's 2023 expert jury). The top five there (Senna, Hamilton,
+  Schumacher, Verstappen) all rate 95. The model judges drivers mostly against their
+  teammates, which undersells anyone who shared a garage with another great; the poll
+  corrects that. Every poll place and its source is in `tools/sweep_driver_tiers.csv`.
 
 In each race, cars can break down or crash out (more often with a fragile car or a
-crash-prone driver), and the running cars finish in order of strength plus luck. The 1988
-McLaren, which really won 15 of 16 races, wins about 14.5 of 20 here against fields from every
-era. A good draft from random rolls wins all 20 about once in 35 tries.
+crash-prone driver), and the running cars finish in order of strength plus luck. Rival
+drivers race with 85% of their career rating, so your drafted greats have a small edge. The
+1988 McLaren, which really won 15 of 16 races, wins about 15 of 20 here against fields from
+every era. A good draft from random rolls wins all 20 about once in 30 tries.
 
 ## Development
 

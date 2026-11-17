@@ -105,6 +105,9 @@ class SweepSimConfig(BaseModel):
     absence_rate: float = 0.03
     """Chance, per race and per main driver, that the reserve drives instead."""
     retirement_cap: float = 0.9
+    rival_career_scale: float = 0.85
+    """Rival drivers race with this share of their career rating; the player's drivers race with
+    all of it. Tuned so a skilled drafter gets a clean sweep about once in 30 games."""
 
 
 DEFAULT_SWEEP_SIM = SweepSimConfig()

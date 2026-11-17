@@ -124,7 +124,13 @@ def _field(dataset: SweepDataset, year: int, config: SweepSimConfig) -> list[_En
         for driver in dataset.mains(car.key):
             mechanical, incident = retirement_chances(car.reliability, driver.incident, config)
             entrants.append(
-                _Entrant(car.car + driver.rating, mechanical, incident, driver.name, car.label)
+                _Entrant(
+                    car.car + config.rival_career_scale * driver.career,
+                    mechanical,
+                    incident,
+                    driver.name,
+                    car.label,
+                )
             )
     return entrants
 
@@ -160,7 +166,7 @@ def simulate_season(
             seats[1], reserve[1] = team.reserve, True
         own = [
             _Entrant(
-                d.rating + strength,
+                d.career + strength,
                 *retirement_chances(reliability, d.incident, config),
                 d.name,
                 None,

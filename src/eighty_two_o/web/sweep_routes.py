@@ -150,7 +150,7 @@ def driver_rating(driver: DriverSeason) -> int:
     Returns:
         The rating.
     """
-    return display_rating(Slot.DRIVER, driver.rating)
+    return display_rating(Slot.DRIVER, driver.career)
 
 
 def car_result_line(result: CarResult) -> str:

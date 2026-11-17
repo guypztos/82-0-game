@@ -94,7 +94,7 @@ class Skilled:
             slot: [part_score(slot, car) for car in dataset.rollable] for slot in PART_SLOTS
         }
         self._values[Slot.DRIVER] = [
-            max(d.rating for d in dataset.roster(car.key)) for car in dataset.rollable
+            max(d.career for d in dataset.roster(car.key)) for car in dataset.rollable
         ]
         self._cache: dict[tuple[Slot, int], float] = {}
 
@@ -137,10 +137,10 @@ class Skilled:
 
     def _driver_advantage(self, state: SweepDraft, card: DriverSeason, draws: int) -> float:
         if len(state.drivers) < TEAM_DRIVERS - 1:
-            return DRIVER_WEIGHT * (card.rating - self._best(Slot.DRIVER, draws))
-        low = min(d.rating for d in state.drivers)
-        return DRIVER_WEIGHT * max(0.0, card.rating - low) + RESERVE_WEIGHT * (
-            min(card.rating, low) - self._best(Slot.DRIVER, 1)
+            return DRIVER_WEIGHT * (card.career - self._best(Slot.DRIVER, draws))
+        low = min(d.career for d in state.drivers)
+        return DRIVER_WEIGHT * max(0.0, card.career - low) + RESERVE_WEIGHT * (
+            min(card.career, low) - self._best(Slot.DRIVER, 1)
         )
 
 
@@ -181,7 +181,7 @@ def draft_team(dataset: SweepDataset, seed: int, policy: Policy) -> Team:
     while not state.complete:
         item = policy(state, dataset, rng)
         state = reroll(state, dataset) if item is None else pick(state, dataset, item)
-    first, second, reserve = sorted(state.drivers, key=lambda d: -d.rating)
+    first, second, reserve = sorted(state.drivers, key=lambda d: -d.career)
     parts = {slot.value: state.part(slot) for slot in PART_SLOTS}
     return Team.model_validate({**parts, "mains": (first, second), "reserve": reserve})
 

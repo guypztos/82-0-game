@@ -36,16 +36,18 @@ Game logic is pure (no input/output) and the browser is a thin layer on top:
 - `game.py`: a whole game as an immutable `Game` (phases draft → lineup → done) and the
   `GameStore` alias of the generic `Store` in `store.py`.
 - `sweep/`: Clean Sweep. Bundled `cars.csv` / `drivers.csv` (built by
-  `tools/build_sweep_dataset.py` from F1DB plus `tools/sweep_corrections.csv`, never edited by
-  hand), then `models.py`, `repository.py`, `draft.py` → `team.py` → `season.py`, `game.py`.
+  `tools/build_sweep_dataset.py` from F1DB plus `tools/sweep_corrections.csv` and
+  `tools/sweep_driver_tiers.csv`, never edited by hand), then `models.py`, `repository.py`,
+  `draft.py` → `team.py` → `season.py`, `game.py`. Drafted drivers race with their `career`
+  rating, rivals with `SweepSimConfig.rival_career_scale` of it; `rating` is per season.
   Its constants are `SweepDraftConfig`, `SweepSimConfig`, `SweepDisplayConfig` in `config.py`.
   Never brand it "F1", "Formula 1" or "Grand Prix"; "Formula 1" appears only in the credit.
 - `web/`: FastAPI routes (`routes.py`, `sweep_routes.py` under `/sweep`), Jinja templates
   (`templates/sweep/` for Clean Sweep) and static CSS/JS. Server-rendered forms with
   post/redirect/get; Legend mode must never send stats to the browser before the lineup.
 - `cli.py`: the `eighty-two-o` command (uvicorn plus opening the browser).
-- `tools/`: `build_dataset.py`, `calibrate.py`, `build_sweep_dataset.py`, `sweep_corrections.csv`
-  and `calibrate_sweep.py`.
+- `tools/`: `build_dataset.py`, `calibrate.py`, `build_sweep_dataset.py`, `sweep_corrections.csv`,
+  `sweep_driver_tiers.csv` and `calibrate_sweep.py`.
 - `tests/`: mirrors the package. `tests/factories.py` builds small fake records and datasets;
   the `dataset` and `sweep_dataset` fixtures in `tests/conftest.py` are the real bundled data.
 

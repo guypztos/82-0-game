@@ -17,7 +17,9 @@ from tools.build_sweep_dataset import (
     Correction,
     DataError,
     OutputRow,
+    Tier,
     build,
+    career_ratings,
     centre,
     check_expected,
     check_sources,
@@ -30,7 +32,9 @@ from tools.build_sweep_dataset import (
     incident_ratios,
     is_start,
     parse_corrections,
+    parse_tiers,
     pit_values,
+    poll_floor,
     read_tables,
     reliability,
     rosters,
@@ -165,6 +169,51 @@ class TestRules:
 
         assert len(corrections) == 11
         assert all(c.source.startswith("https://en.wikipedia.org/wiki/") for c in corrections)
+
+    def test_tiers(self) -> None:
+        row = {"driver_id": "a1", "rank": "3", "source": "s", "note": "n"}
+
+        assert parse_tiers([row]) == [Tier("a1", 3, "s", "n")]
+        with pytest.raises(DataError, match="more than once"):
+            parse_tiers([row, row])
+        with pytest.raises(DataError, match="start at 1"):
+            parse_tiers([row | {"rank": "0"}])
+
+    def test_shipped_tiers_parse(self) -> None:
+        path = Path(__file__).resolve().parents[2] / "tools" / "sweep_driver_tiers.csv"
+        with path.open(encoding="utf-8", newline="") as file:
+            tiers = parse_tiers(csv.DictReader(file))
+
+        assert len(tiers) == 30
+        assert all(t.source.startswith("https://www.autosport.com/") for t in tiers)
+        assert [t.driver_id for t in tiers if t.rank <= 5] == [
+            "ayrton-senna",
+            "lewis-hamilton",
+            "michael-schumacher",
+            "max-verstappen",
+        ]
+
+    @pytest.mark.parametrize(
+        ("rank", "floor"), [(1, 2.8), (5, 2.8), (6, 2.2), (15, 2.2), (30, 1.6), (50, 1.1)]
+    )
+    def test_poll_floor(self, rank: int, floor: float) -> None:
+        assert poll_floor(rank) == floor
+
+    def test_no_floor_below_the_poll(self) -> None:
+        assert poll_floor(51) == float("-inf")
+
+    def test_career_ratings(self) -> None:
+        def card(driver: str, rating: float) -> OutputRow:
+            return {"driver_id": driver, "rating": str(rating)}
+
+        rows = [card("x", r) for r in (1.0, 0.5, 0.0, -1.0)] + [card("y", 0.2), card("z", 0.4)]
+        tiers = [Tier("y", 3, "s", "n"), Tier("z", 60, "s", "n")]
+
+        career = career_ratings(rows, tiers)
+
+        assert career == {"x": pytest.approx(0.5), "y": 2.8, "z": pytest.approx(0.4)}
+        with pytest.raises(DataError, match="match no driver"):
+            career_ratings(rows, [Tier("nobody", 1, "s", "n")])
 
 
 class TestFitEvents:
@@ -442,6 +491,18 @@ class TestBuild:
         assert (first["wins"], first["poles"], first["starts"]) == ("3", "3", "3")
         assert first["championship_position"] == "1"
         assert drivers[1]["championship_position"] == ""
+
+    def test_career_column(self, built: tuple[list[OutputRow], list[OutputRow]]) -> None:
+        _, drivers = built
+        assert all(row["career"] == row["rating"] for row in drivers)  # one season each
+
+        weakest = min(drivers, key=lambda row: float(row["rating"]))["driver_id"]
+        best = max(drivers, key=lambda row: float(row["rating"]))
+        tiers = [Tier(weakest, 1, "s", "n"), Tier(best["driver_id"], 50, "s", "n")]
+        _, raised = build(world_tables(), [], tiers, iterations=200)
+        careers = {row["driver_id"]: row["career"] for row in raised}
+        assert careers[weakest] == "2.800"
+        assert careers[best["driver_id"]] == best["rating"]  # already above the floor
 
     def test_parts_add_up_with_pit_and_corrections(self) -> None:
         tables = world_tables()

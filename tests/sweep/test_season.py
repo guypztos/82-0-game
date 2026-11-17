@@ -58,21 +58,21 @@ class TestPinned:
     def test_all_time_team(self, sweep_dataset: SweepDataset) -> None:
         wins, sweeps = odds(all_time(sweep_dataset), sweep_dataset)
 
-        assert wins >= 19.8
-        assert 0.87 <= sweeps <= 0.93
+        assert wins >= 19.7
+        assert 0.82 <= sweeps <= 0.89
 
     def test_mclaren_1988(self, sweep_dataset: SweepDataset) -> None:
         team = as_built(sweep_dataset, "mclaren:1988", "gerhard-berger:1988:ferrari")
         wins, sweeps = odds(team, sweep_dataset)
 
-        assert 14.0 <= wins <= 15.1
+        assert 14.7 <= wins <= 15.7
         assert sweeps < 0.01
 
     def test_red_bull_2023(self, sweep_dataset: SweepDataset) -> None:
         team = as_built(sweep_dataset, "red-bull:2023", "daniel-ricciardo:2023:alphatauri")
         wins, sweeps = odds(team, sweep_dataset)
 
-        assert 8.0 <= wins <= 9.0
+        assert 6.4 <= wins <= 7.4
         assert sweeps == 0
 
     def test_mixed_team(self, sweep_dataset: SweepDataset) -> None:
@@ -88,18 +88,29 @@ class TestPinned:
         )
         wins, sweeps = odds(team, sweep_dataset)
 
-        assert 6.8 <= wins <= 7.9
+        assert 8.9 <= wins <= 9.9
         assert sweeps == 0
 
     def test_jordan_1999(self, sweep_dataset: SweepDataset) -> None:
         team = as_built(sweep_dataset, "jordan:1999", "jarno-trulli:1999:prost")
         wins, sweeps = odds(team, sweep_dataset)
 
-        assert 0.7 <= wins <= 1.3
+        assert 0.6 <= wins <= 1.1
         assert sweeps == 0
 
 
 class TestRules:
+    def test_rivals_race_with_a_share_of_their_career(self, sweep_dataset: SweepDataset) -> None:
+        team = as_built(sweep_dataset, "red-bull:2023", "daniel-ricciardo:2023:alphatauri")
+
+        def wins(scale: float) -> float:
+            config = SweepSimConfig(rival_career_scale=scale)
+            return statistics.fmean(
+                simulate_season(team, sweep_dataset, seed, config).wins for seed in range(100)
+            )
+
+        assert wins(0.5) > wins(0.85) > wins(1.2)
+
     def test_twenty_different_fields(self, sweep_dataset: SweepDataset) -> None:
         season = simulate_season(all_time(sweep_dataset), sweep_dataset, 1)
 

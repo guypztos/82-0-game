@@ -82,7 +82,10 @@ class CarSeason(BaseModel):
 class DriverSeason(BaseModel):
     """One driver's season with one constructor: a card that can be drafted.
 
-    ``incident`` is the driver's crash-out rate over his career relative to his eras (1.0 is
+    ``rating`` is how strong he was that season, used when he races in that season's field.
+    ``career`` is his best level (his best seasons, raised to his tier in a published poll of
+    the quickest drivers); every one of his cards carries it, and it is what a drafted driver
+    races with. ``incident`` is his crash-out rate over his career relative to his eras (1.0 is
     average, lower is better). Counting stats are for this constructor and year.
     """
 
@@ -93,6 +96,7 @@ class DriverSeason(BaseModel):
     year: int
     constructor_id: str
     rating: float
+    career: float
     incident: float
     starts: int
     wins: int

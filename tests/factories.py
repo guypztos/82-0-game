@@ -134,6 +134,7 @@ def make_driver(**overrides: object) -> DriverSeason:
         "main": True,
     }
     fields.update(overrides)
+    fields.setdefault("career", fields["rating"])  # one rating for every season by default
     return DriverSeason.model_validate(fields)
 
 

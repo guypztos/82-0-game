@@ -24,9 +24,26 @@ A hobby project that may be shared with others, so it must be easy to install an
 
 ## Structure
 
-- `src/eighty_two_o/`: the package. Keep game logic (draft, simulation, data) free of any
-  input/output so it can be tested without a terminal; the user interface is a thin layer on
-  top. `cli.py` holds the command-line entry point.
-- `tests/`: mirrors the package, one `test_<module>.py` per module.
-- Randomness must be injectable (pass a `random.Random` or a seed) so simulations are
-  reproducible in tests.
+Game logic is pure (no input/output) and the browser is a thin layer on top:
+
+- `data/`: the bundled `players.csv` / `teams.csv` (built by `tools/build_dataset.py`, never
+  edited by hand), the `PlayerSeason` / `TeamSeason` models and the `Dataset` index.
+- `config.py`: every tunable number (`DraftConfig`, `RatingConfig`, `SimConfig`), including
+  special cards (`RatingConfig.card_boosts`).
+- `draft.py` → `rating.py` → `season.py`: the draft, the team rating and the 82-game sim.
+- `game.py`: a whole game as an immutable `Game` (phases draft → lineup → done) and the
+  `GameStore` protocol with its in-memory implementation.
+- `web/`: FastAPI routes, Jinja templates and static CSS/JS. Server-rendered forms with
+  post/redirect/get; Legend mode must never send stats to the browser before the lineup.
+- `cli.py`: the `eighty-two-o` command (uvicorn plus opening the browser).
+- `tools/`: `build_dataset.py` and `calibrate.py` (the calibration report).
+- `tests/`: mirrors the package. `tests/factories.py` builds small fake records and datasets;
+  the `dataset` fixture in `tests/conftest.py` is the real bundled data.
+
+Conventions:
+
+- All state is frozen pydantic models that round-trip through JSON.
+- Randomness comes only from the game's seed (`random.Random(f"{seed}:...")`), so the same seed
+  and choices replay the same game. Never store a generator in state.
+- The rating and season tests pin values measured on the real data. If one fails, the change
+  broke the model: re-run `tools/calibrate.py` and only re-pin numbers on purpose.

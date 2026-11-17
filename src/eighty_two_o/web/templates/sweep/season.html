@@ -1,5 +1,6 @@
 {% extends "sweep/_layout.html" %}
 {% from "sweep/_items.html" import part_cells, driver_cells with context %}
+{% from "sweep/_car.html" import car_view with context %}
 {% block title %}{{ season.record }} · Clean Sweep{% endblock %}
 {% block content %}
 <section class="scoreboard" aria-label="Season record">
@@ -67,6 +68,9 @@
       {% endfor %}
     </ul>
   {% endif %}
+
+  <h3>Your car</h3>
+  {{ car_view(team.engine, team.chassis, team.reliability, team.pit_crew, team.mains[0], legend=true) }}
 
   <h3>Your team</h3>
   <div class="table-wrap">

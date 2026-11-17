@@ -1,5 +1,6 @@
 {% extends "sweep/_layout.html" %}
 {% from "sweep/_items.html" import part_cells, driver_cells with context %}
+{% from "sweep/_car.html" import car_view with context %}
 {% block title %}Pick {{ pick_number + 1 }} of {{ rounds }} · Clean Sweep{% endblock %}
 {% block content %}
 {% set show = game.stats_visible %}
@@ -93,13 +94,15 @@
 
   <aside class="picks" aria-label="Your team">
     <h2>Your team</h2>
+    {% set d = game.draft %}
+    {{ car_view(d.engine, d.chassis, d.reliability, d.pit_crew, d.drivers[0] if d.drivers else none) }}
     <ol class="pick-list slot-list">
       {% for slot in part_slots %}
         {% set held = game.draft.part(slot) %}
         <li class="{{ '' if held else 'empty' }}">
           <span class="slot-label">{{ slot.label }}</span>
           {% if held %}
-            <span class="card-name">{{ part_name(slot, held) }}</span>
+            <span class="card-name"><span class="swatch" style="background: {{ part_colour(slot, held) }}"></span>{{ part_name(slot, held) }}</span>
             {% if show %}<span class="card-stat"><span class="rating">{{ part_rating(slot, held) }}</span></span>{% endif %}
           {% else %}
             Open slot

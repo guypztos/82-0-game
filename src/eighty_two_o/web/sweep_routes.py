@@ -25,6 +25,7 @@ from eighty_two_o.sweep.team import (
     part_value,
     retirement_chances,
 )
+from eighty_two_o.web.livery import engine_colour, livery, part_colour
 from eighty_two_o.web.routes import templates
 
 SWEEP_CREDIT = (
@@ -209,6 +210,9 @@ templates.env.globals |= {
     "part_value": part_value,
     "car_result_line": car_result_line,
     "part_slots": PART_SLOTS,
+    "livery": livery,
+    "engine_colour": engine_colour,
+    "part_colour": part_colour,
 }
 templates.env.filters["signed2"] = lambda value: f"{value:+.2f}"
 templates.env.filters["ordinal"] = _ordinal

@@ -13,6 +13,7 @@ from eighty_two_o.sweep.models import Slot
 from eighty_two_o.sweep.repository import SweepDataset
 from eighty_two_o.sweep.season import CarResult, RaceResult, SweepSeason
 from eighty_two_o.web.app import create_app
+from eighty_two_o.web.livery import engine_colour
 from eighty_two_o.web.routes import CREDIT
 from eighty_two_o.web.sweep_routes import (
     SWEEP_CREDIT,
@@ -380,3 +381,27 @@ class TestStartOver:
         assert new.mode is before.mode
         assert new.draft.picks_made == 0
         assert web.game(old_id) == before
+
+
+class TestCarView:
+    def test_fills_in_as_you_draft(self, web: Harness) -> None:
+        game_id = web.start(seed=4)
+        page = web.page(game_id)
+        assert page.count('class="car-part empty"') == page.count('class="car-part')
+        assert "Engine: open." in page
+
+        assert web.pick(game_id, "engine") == 303
+        game = web.game(game_id)
+        assert game.draft.engine is not None
+        page = web.page(game_id)
+        assert f"Engine: {part_name(Slot.ENGINE, game.draft.engine)}." in page
+        assert f"fill: {engine_colour(game.draft.engine)}" in page
+        assert "Chassis: open." in page
+
+    def test_whole_car_on_the_lineup_and_season_pages(self, web: Harness) -> None:
+        game_id = web.start(mode="legend", seed=4)
+        web.draft_all(game_id)
+        for page in (web.page(game_id), web.page(web.play(mode="legend", seed=4))):
+            assert 'class="car-legend"' in page
+            assert 'class="car-part empty"' not in page
+            assert ": open" not in page

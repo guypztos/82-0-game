@@ -1,5 +1,6 @@
 {% extends "sweep/_layout.html" %}
 {% from "sweep/_items.html" import part_cells, driver_cells with context %}
+{% from "sweep/_car.html" import car_view with context %}
 {% block title %}Choose your reserve · Clean Sweep{% endblock %}
 {% block content %}
 {% set show = game.stats_visible %}
@@ -11,6 +12,9 @@
     which happens now and then.
   </p>
 </section>
+
+{% set d = game.draft %}
+{{ car_view(d.engine, d.chassis, d.reliability, d.pit_crew, d.drivers[0], legend=true) }}
 
 <section class="table-wrap" aria-label="Your car">
   <table class="roster parts">

@@ -353,3 +353,30 @@ class TestHelpers:
 
 def test_mode_badge(web: Harness) -> None:
     assert f"{Mode.LEGEND.value.capitalize()} mode" in web.page(web.start(mode="legend"))
+
+
+class TestStartOver:
+    def test_offered_until_the_season_is_raced(self, web: Harness) -> None:
+        game_id = web.start(mode="legend")
+        restart = 'action="/sweep/games" class="restart"'
+        assert restart in web.page(game_id)
+        assert 'name="mode" value="legend"' in web.page(game_id)
+
+        web.draft_all(game_id)
+        assert restart in web.page(game_id)
+
+        assert web.lock(game_id) == 303
+        assert restart not in web.page(game_id)
+
+    def test_starts_a_fresh_run_and_keeps_the_old_one(self, web: Harness) -> None:
+        old_id = web.start(mode="legend", seed=5)
+        assert web.pick(old_id, "engine") == 303
+        before = web.game(old_id)
+
+        response = web.client.post("/sweep/games", data={"mode": "legend"})
+        new = web.game(response.headers["location"].removeprefix("/sweep/games/"))
+
+        assert new.id != old_id
+        assert new.mode is before.mode
+        assert new.draft.picks_made == 0
+        assert web.game(old_id) == before

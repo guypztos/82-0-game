@@ -370,3 +370,30 @@ class TestBreakdown:
         assert rows["Shot creation"] == pytest.approx(-1.0)
         assert rows["Diminishing returns"] == pytest.approx(-6.5)
         assert sum(rows.values()) == pytest.approx(r.net)
+
+
+class TestStartOver:
+    def test_offered_until_the_season_is_played(self, web: Harness) -> None:
+        game_id = web.start(mode="legend")
+        restart = 'action="/games" class="restart"'
+        assert restart in web.page(game_id)
+        assert 'name="mode" value="legend"' in web.page(game_id)
+
+        web.draft_all(game_id)
+        assert restart in web.page(game_id)
+
+        web.lock_first_five(game_id)
+        assert restart not in web.page(game_id)
+
+    def test_starts_a_fresh_run_and_keeps_the_old_one(self, web: Harness) -> None:
+        old_id = web.start(mode="legend", seed=5)
+        web.pick_first_available(old_id)
+        before = web.game(old_id)
+
+        response = web.client.post("/games", data={"mode": "legend"})
+        new = web.game(response.headers["location"].removeprefix("/games/"))
+
+        assert new.id != old_id
+        assert new.mode is before.mode
+        assert new.draft.picks == ()
+        assert web.game(old_id) == before

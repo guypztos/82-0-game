@@ -10,7 +10,17 @@
   <header class="site-header">
     <a class="logo" href="/"><span class="led">{% block logo %}82-0{% endblock %}</span></a>
     {% if game is defined and game %}
-      <span class="mode-badge">{{ game.mode.value | capitalize }} mode</span>
+      <div class="header-actions">
+        <span class="mode-badge">{{ game.mode.value | capitalize }} mode</span>
+        {% if game.phase.value != "done" %}
+          {# Abandons this run and starts a fresh one in the same mode, with a new seed. #}
+          <form method="post" action="{% block games_path %}/games{% endblock %}" class="restart"
+                onsubmit="return confirm('Start over? This run will be lost.')">
+            <input type="hidden" name="mode" value="{{ game.mode.value }}">
+            <button type="submit" class="secondary">Start over</button>
+          </form>
+        {% endif %}
+      </div>
     {% endif %}
   </header>
   <main>

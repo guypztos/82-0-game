@@ -1,0 +1,12 @@
+engine_id,year,delta,source,note
+mercedes,2014,0.5,https://en.wikipedia.org/wiki/Mercedes_V6_hybrid_Formula_One_power_unit,Proved to have a clear advantage over the other engines
+mercedes,2015,0.5,https://en.wikipedia.org/wiki/Mercedes_V6_hybrid_Formula_One_power_unit,Proved to have a clear advantage over the other engines
+mercedes,2016,0.5,https://en.wikipedia.org/wiki/Mercedes_V6_hybrid_Formula_One_power_unit,Proved to have a clear advantage over the other engines
+renault,2010,-1.0,https://en.wikipedia.org/wiki/Red_Bull_RB6,Newey: probably the car with the most downforce in history; the wins belong to the chassis
+renault,2011,-1.0,https://en.wikipedia.org/wiki/Red_Bull_RB7,Dominance credited in part to the exhaust-blown diffuser
+renault,2015,-0.5,https://en.wikipedia.org/wiki/Red_Bull_RB11,Engine lacked performance and reliability against Mercedes and Ferrari
+honda,2015,-1.0,https://en.wikipedia.org/wiki/McLaren_MP4-30,Reported 120 bhp down on the Mercedes
+honda,2017,-0.5,https://en.wikipedia.org/wiki/McLaren_MCL32,Lack of reliability and power
+ferrari,2019,1.0,https://en.wikipedia.org/wiki/Ferrari_SF90,Strong straight-line performance all season; engine later investigated
+ford,1982,-0.5,https://en.wikipedia.org/wiki/Cosworth_DFV,Could not compete with the power of the turbo engines
+ford,1983,-0.5,https://en.wikipedia.org/wiki/Cosworth_DFV,Could not compete with the power of the turbo engines

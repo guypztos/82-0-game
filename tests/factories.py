@@ -2,6 +2,8 @@
 
 from eighty_two_o.data.models import PlayerSeason, Position, TeamSeason
 from eighty_two_o.data.repository import Dataset
+from eighty_two_o.sweep.models import CarSeason, DriverSeason
+from eighty_two_o.sweep.repository import SweepDataset
 
 
 def make_player(**overrides: object) -> PlayerSeason:
@@ -81,3 +83,95 @@ def make_dataset(team_count: int = 12, roster_size: int = 10) -> Dataset:
         for i in range(team_count)
     )
     return Dataset(players, teams)
+
+
+def make_car(**overrides: object) -> CarSeason:
+    """Build a constructor-season with sensible defaults; pass fields to override them."""
+    fields: dict[str, object] = {
+        "constructor_id": "test",
+        "year": 2000,
+        "name": "Test",
+        "chassis_name": "T1",
+        "engine_id": "testeng",
+        "engine_name": "Testeng",
+        "engine_badge": "Testeng",
+        "car": 0.0,
+        "engine": 0.0,
+        "chassis": 0.0,
+        "pit": 0.0,
+        "pit_rated": True,
+        "pit_rank": 1,
+        "reliability": 1.0,
+        "races": 16,
+        "starts": 32,
+        "wins": 1,
+        "poles": 1,
+        "podiums": 2,
+        "mechanical_retirements": 4,
+        "engine_wins": 1,
+        "engine_teams": 1,
+        "championship_position": 1,
+        "rollable": True,
+    }
+    fields.update(overrides)
+    return CarSeason.model_validate(fields)
+
+
+def make_driver(**overrides: object) -> DriverSeason:
+    """Build a driver card with sensible defaults; pass fields to override them."""
+    fields: dict[str, object] = {
+        "driver_id": "test-driver",
+        "name": "Test Driver",
+        "year": 2000,
+        "constructor_id": "test",
+        "rating": 0.0,
+        "incident": 1.0,
+        "starts": 16,
+        "wins": 0,
+        "poles": 0,
+        "podiums": 0,
+        "championship_position": 10,
+        "main": True,
+    }
+    fields.update(overrides)
+    return DriverSeason.model_validate(fields)
+
+
+def make_sweep_dataset(
+    years: tuple[int, ...] = (2000, 2001), cars_per_year: int = 4, drivers_per_car: int = 2
+) -> SweepDataset:
+    """Build a small Clean Sweep dataset.
+
+    Car ``i`` of year ``y`` is constructor ``c{i}`` with strength ``i - cars_per_year / 2`` (all
+    of it in the chassis) and is rollable. Its drivers are ``d{i}{j}-{y}`` (a different person
+    every season) with rating ``-j``; the first two are its main drivers.
+    """
+    cars: list[CarSeason] = []
+    drivers: list[DriverSeason] = []
+    for year in years:
+        for i in range(cars_per_year):
+            strength = i - cars_per_year / 2
+            cars.append(
+                make_car(
+                    constructor_id=f"c{i}",
+                    year=year,
+                    name=f"Team {i}",
+                    car=strength,
+                    chassis=strength,
+                    engine_id=f"e{i}",
+                    engine_name=f"Engine {i}",
+                    engine_badge=f"Engine {i}",
+                )
+            )
+            drivers.extend(
+                make_driver(
+                    driver_id=f"d{i}{j}-{year}",
+                    name=f"Driver {i}{j} {year}",
+                    year=year,
+                    constructor_id=f"c{i}",
+                    rating=-float(j),
+                    main=j < 2,
+                )
+                for j in range(drivers_per_car)
+            )
+    return SweepDataset(cars, drivers)

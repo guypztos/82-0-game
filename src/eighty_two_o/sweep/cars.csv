@@ -1,0 +1,517 @@
+constructor_id,year,name,chassis_name,engine_id,engine_name,engine_badge,car,engine,chassis,pit,pit_rated,pit_rank,reliability,races,starts,wins,poles,podiums,mechanical_retirements,engine_wins,engine_teams,championship_position,rollable
+alfa-romeo,1980,Alfa Romeo,179,alfa-romeo,Alfa Romeo,Alfa Romeo,0.039,0.020,0.019,0.000,false,,1.539,14,26,0,1,0,15,0,1,11,false
+arrows,1980,Arrows,A3,ford,Ford,Ford,-1.162,1.125,-2.287,0.000,false,,0.704,14,25,0,0,1,5,11,8,7,false
+brabham,1980,Brabham,BT49,ford,Ford,Ford,1.465,1.125,0.340,0.000,false,,0.915,14,27,3,2,6,8,11,8,3,true
+ferrari,1980,Ferrari,312T5,ferrari,Ferrari,Ferrari,-1.229,-0.615,-0.614,0.000,false,,0.998,14,27,0,0,0,9,0,1,10,false
+fittipaldi,1980,Fittipaldi,F7 / F8,ford,Ford,Ford,-1.530,1.125,-2.655,0.000,false,,0.880,14,25,0,0,2,7,11,8,8,false
+ligier,1980,Ligier,JS11/15,ford,Ford,Ford,1.844,1.125,0.719,0.000,false,,0.890,14,28,2,3,10,8,11,8,2,true
+lotus,1980,Lotus,81 / 81B,ford,Ford,Ford,-1.148,1.125,-2.273,0.000,false,,1.151,14,30,0,0,1,12,11,8,5,false
+mclaren,1980,McLaren,M29B / M29C / M30,ford,Ford,Ford,-1.481,1.125,-2.606,0.000,false,,0.998,14,24,0,0,0,8,11,8,9,false
+renault,1980,Renault,RE20,renault,Renault,Renault,2.600,1.300,1.300,0.000,false,,1.413,14,27,3,5,4,14,3,1,4,true
+tyrrell,1980,Tyrrell,009 / 010,ford,Ford,Ford,-0.929,1.125,-2.054,0.000,false,,0.551,14,29,0,0,0,4,11,8,6,false
+williams,1980,Williams,FW07 / FW07B,ford,Ford,Ford,1.531,1.125,0.406,0.000,false,,0.584,14,32,6,3,18,5,11,8,1,true
+alfa-romeo,1981,Alfa Romeo,179B / 179C / 179D,alfa-romeo,Alfa Romeo,Alfa Romeo,-1.027,-0.514,-0.513,0.000,false,,0.961,15,30,0,0,1,8,0,1,9,false
+arrows,1981,Arrows,A3,ford,Ford,Ford,-0.780,0.717,-1.497,0.000,false,,1.332,15,24,0,1,2,10,8,6,8,false
+brabham,1981,Brabham,BT49C,ford,Ford,Ford,1.314,0.717,0.597,0.000,false,,0.806,15,29,3,4,7,6,8,6,2,true
+ferrari,1981,Ferrari,126CK,ferrari,Ferrari,Ferrari,0.433,0.217,0.216,0.000,false,,1.135,15,30,2,1,3,10,2,1,5,true
+ligier,1981,Ligier,JS17,matra,Matra,Matra,0.579,0.289,0.290,0.000,false,,1.378,15,28,2,1,7,12,2,1,4,true
+lotus,1981,Lotus,81B / 87 / 88 / 88B,ford,Ford,Ford,-0.454,0.717,-1.171,0.000,false,,1.037,15,27,0,0,1,8,8,6,7,false
+mclaren,1981,McLaren,M29F / MP4/1,ford,Ford,Ford,-0.082,0.717,-0.799,0.000,false,,0.806,15,29,1,0,4,6,8,6,6,true
+renault,1981,Renault,RE20B / RE30,renault,Renault,Renault,1.641,0.821,0.820,0.000,false,,0.895,15,29,3,6,7,7,3,1,3,true
+tyrrell,1981,Tyrrell,010 / 011,ford,Ford,Ford,-2.461,0.717,-3.178,0.000,false,,0.775,15,26,0,0,0,5,8,6,10,false
+williams,1981,Williams,FW07C,ford,Ford,Ford,0.837,0.717,0.120,0.000,false,,0.524,15,30,4,2,13,3,8,6,1,true
+alfa-romeo,1982,Alfa Romeo,179D / 182 / 182B,alfa-romeo,Alfa Romeo,Alfa Romeo,0.322,0.161,0.161,0.000,false,,1.056,16,32,0,1,1,11,0,1,10,false
+arrows,1982,Arrows,A4 / A5,ford,Ford,Ford,-1.471,0.322,-1.793,0.000,false,,0.748,16,24,0,0,0,5,7,7,11,false
+ats-wheels,1982,ATS,D5,ford,Ford,Ford,-1.836,0.322,-2.158,0.000,false,,0.882,16,26,0,0,0,7,7,7,12,false
+brabham,1982,Brabham,BT49C / BT49D / BT50,bmw,BMW,BMW,1.456,0.728,0.728,0.000,false,,1.220,16,29,2,1,5,12,2,1,7,true
+ferrari,1982,Ferrari,126C2,ferrari,Ferrari,Ferrari,2.245,1.122,1.123,0.000,false,,0.497,16,22,3,3,11,2,3,1,1,true
+ligier,1982,Ligier,JS17B / JS19,matra,Matra,Matra,-0.789,-0.395,-0.394,0.000,false,,1.708,16,29,0,0,4,18,0,1,8,false
+lotus,1982,Lotus,87B / 91,ford,Ford,Ford,-0.178,0.322,-0.500,0.000,false,,1.057,16,29,1,0,2,10,7,7,5,true
+march,1982,March,821,ford,Ford,Ford,-2.376,0.322,-2.698,0.000,false,,0.995,16,22,0,0,0,7,7,7,,false
+mclaren,1982,McLaren,MP4/1B,ford,Ford,Ford,1.274,0.322,0.952,0.000,false,,0.813,16,29,4,0,8,7,7,7,2,true
+renault,1982,Renault,RE30B,renault,Renault,Renault,2.682,1.341,1.341,0.000,false,,0.980,16,32,4,10,8,10,4,1,3,true
+toleman,1982,Toleman,TG181B / TG181C / TG183,hart,Hart,Hart,-2.295,-1.147,-1.148,0.000,false,,1.710,16,18,0,0,0,12,0,1,,false
+tyrrell,1982,Tyrrell,011,ford,Ford,Ford,-0.225,0.322,-0.547,0.000,false,,0.754,16,32,1,0,2,7,7,7,6,true
+williams,1982,Williams,FW07C / FW07D / FW08,ford,Ford,Ford,1.191,0.322,0.869,0.000,false,,0.555,16,30,1,1,7,4,7,7,4,true
+alfa-romeo,1983,Alfa Romeo,183T,alfa-romeo,Alfa Romeo,Alfa Romeo,0.546,-0.742,1.288,0.000,false,,1.232,15,29,0,0,2,14,0,2,6,false
+arrows,1983,Arrows,A6,ford,Ford,Ford,-1.209,-0.468,-0.741,0.000,false,,0.564,15,30,0,0,0,5,3,6,10,false
+brabham,1983,Brabham,BT52 / BT52B,bmw,BMW,BMW,1.725,0.863,0.862,0.000,false,,1.058,15,30,4,2,10,12,4,1,3,true
+ferrari,1983,Ferrari,126C2B / 126C3,ferrari,Ferrari,Ferrari,3.349,1.675,1.674,0.000,false,,0.776,15,30,4,8,12,8,4,1,1,true
+ligier,1983,Ligier,JS21,ford,Ford,Ford,-1.345,-0.468,-0.877,0.000,false,,1.117,15,28,0,0,0,12,3,6,,false
+lotus,1983,Lotus,92 / 93T / 94T,renault,Renault,Renault,0.173,0.693,-0.520,0.000,false,,1.200,15,30,0,1,1,14,4,2,8,false
+mclaren,1983,McLaren,MP4/1C / MP4/1E,ford,Ford,Ford,-0.037,-0.468,0.431,0.000,false,,0.894,15,28,1,0,5,9,3,6,5,true
+osella,1983,Osella,FA1D / FA1E,alfa-romeo,Alfa Romeo,Alfa Romeo,-2.772,-0.742,-2.030,0.000,false,,1.563,15,16,0,0,0,11,0,2,,false
+renault,1983,Renault,RE30C / RE40,renault,Renault,Renault,1.905,0.693,1.212,0.000,false,,0.988,15,30,4,3,11,11,4,2,2,true
+theodore,1983,Theodore,N183,ford,Ford,Ford,-1.728,-0.468,-1.260,0.000,false,,0.983,15,22,0,0,0,8,3,6,12,false
+toleman,1983,Toleman,TG183B,hart,Hart,Hart,-0.014,-0.007,-0.007,0.000,false,,1.159,15,29,0,0,0,13,0,1,9,false
+tyrrell,1983,Tyrrell,011B / 012,ford,Ford,Ford,-0.726,-0.468,-0.258,0.000,false,,0.917,15,30,1,0,1,10,3,6,7,true
+williams,1983,Williams,FW08C / FW09,ford,Ford,Ford,0.132,-0.468,0.600,0.000,false,,0.652,15,29,1,1,2,6,3,6,4,true
+alfa-romeo,1984,Alfa Romeo,184T,alfa-romeo,Alfa Romeo,Alfa Romeo,-1.221,-1.100,-0.121,0.000,false,,1.158,16,31,0,0,1,15,0,2,8,false
+arrows,1984,Arrows,A6 / A7,bmw,BMW,BMW,-1.397,0.151,-1.548,0.000,false,,0.990,16,30,0,0,0,12,2,2,9,false
+brabham,1984,Brabham,BT53,bmw,BMW,BMW,1.850,0.151,1.699,0.000,false,,1.254,16,32,2,9,5,17,2,2,4,true
+ferrari,1984,Ferrari,126C4,ferrari,Ferrari,Ferrari,1.212,0.606,0.606,0.000,false,,0.815,16,32,1,1,8,10,1,1,2,true
+ligier,1984,Ligier,JS23 / JS23B,renault,Renault,Renault,-0.895,0.993,-1.888,0.000,false,,0.965,16,31,0,0,0,12,0,3,9,false
+lotus,1984,Lotus,95T,renault,Renault,Renault,1.490,0.993,0.497,0.000,false,,0.878,16,32,0,2,6,11,0,3,3,false
+mclaren,1984,McLaren,MP4/2,tag,TAG,TAG,3.177,1.589,1.588,0.000,false,,0.689,16,32,12,3,18,8,12,1,1,true
+osella,1984,Osella,FA1E / FA1F,alfa-romeo,Alfa Romeo,Alfa Romeo,-2.077,-1.100,-0.977,0.000,false,,1.176,16,22,0,0,0,11,0,2,12,false
+ram,1984,RAM,01 / 02,hart,Hart,Hart,-3.285,-1.375,-1.910,0.000,false,,1.395,16,28,0,0,0,17,0,2,,false
+renault,1984,Renault,RE50,renault,Renault,Renault,1.487,0.993,0.494,0.000,false,,0.940,16,32,0,1,5,12,0,3,5,false
+toleman,1984,Toleman,TG183B / TG184,hart,Hart,Hart,-0.841,-1.375,0.534,0.000,false,,1.109,16,26,0,0,3,12,0,2,7,false
+williams,1984,Williams,FW09 / FW09B,honda,Honda,Honda,0.501,0.250,0.251,0.000,false,,1.442,16,32,1,0,2,20,1,1,6,true
+alfa-romeo,1985,Alfa Romeo,184TB / 185T,alfa-romeo,Alfa Romeo,Alfa Romeo,-1.065,-0.533,-0.532,0.000,false,,1.471,16,32,0,0,0,20,0,1,,false
+arrows,1985,Arrows,A8,bmw,BMW,BMW,-0.882,-0.153,-0.729,0.000,false,,0.640,16,32,0,0,1,7,1,2,8,false
+brabham,1985,Brabham,BT54,bmw,BMW,BMW,0.423,-0.153,0.576,0.000,false,,1.010,16,30,1,1,2,12,1,2,5,true
+ferrari,1985,Ferrari,156/85,ferrari,Ferrari,Ferrari,1.721,0.861,0.860,0.000,false,,0.704,16,32,2,1,10,8,2,1,2,true
+ligier,1985,Ligier,JS25,renault,Renault,Renault,-0.256,0.412,-0.668,0.000,false,,0.900,16,29,0,0,4,10,3,3,6,false
+lotus,1985,Lotus,97T,renault,Renault,Renault,1.491,0.412,1.079,0.000,false,,0.767,16,32,3,8,9,9,3,3,4,true
+mclaren,1985,McLaren,MP4/2B,tag,TAG,TAG,1.802,0.901,0.901,0.000,false,,0.919,16,31,6,2,12,11,6,1,1,true
+ram,1985,RAM,03,hart,Hart,Hart,-2.723,-0.999,-1.724,0.000,false,,1.324,16,23,0,0,0,13,0,2,,false
+renault,1985,Renault,RE60 / RE60B,renault,Renault,Renault,-0.385,0.412,-0.797,0.000,false,,0.919,16,31,0,0,2,11,3,3,7,false
+toleman,1985,Toleman,TG185,hart,Hart,Hart,-0.273,-0.999,0.726,0.000,false,,1.781,16,18,0,1,0,15,0,2,,false
+tyrrell,1985,Tyrrell,012 / 014,ford,Ford,Ford,-1.844,-0.922,-0.922,0.000,false,,0.569,16,28,0,0,0,5,0,1,9,false
+williams,1985,Williams,FW10 / FW10B,honda,Honda,Honda,1.991,0.996,0.995,0.000,false,,0.853,16,31,4,3,8,10,4,1,3,true
+arrows,1986,Arrows,A8 / A9,bmw,BMW,BMW,-1.437,0.301,-1.738,0.000,false,,0.923,16,31,0,0,0,13,1,3,10,false
+benetton,1986,Benetton,B186,bmw,BMW,BMW,1.258,0.301,0.957,0.000,false,,1.123,16,32,1,2,2,17,1,3,6,true
+brabham,1986,Brabham,BT54 / BT55,bmw,BMW,BMW,-0.356,0.301,-0.657,0.000,false,,1.185,16,30,0,0,0,17,1,3,9,false
+ferrari,1986,Ferrari,F1/86,ferrari,Ferrari,Ferrari,1.440,0.720,0.720,0.000,false,,0.899,16,32,0,0,5,13,0,1,4,false
+ligier,1986,Ligier,JS27,renault,Renault,Renault,1.131,1.452,-0.321,0.000,false,,0.786,16,32,0,0,2,11,2,3,5,false
+lola,1986,Lola,THL1 / THL2,ford,Ford,Ford,-0.691,-0.345,-0.346,0.000,false,,0.948,16,30,0,0,0,13,0,1,8,false
+lotus,1986,Lotus,98T,renault,Renault,Renault,3.223,1.452,1.771,0.000,false,,0.865,16,31,2,8,8,12,2,3,3,true
+mclaren,1986,McLaren,MP4/2C,tag,TAG,TAG,2.526,1.263,1.263,0.000,false,,0.730,16,32,4,2,12,10,4,1,2,true
+minardi,1986,Minardi,M185B / M186,motori-moderni,Motori Moderni,Motori Moderni,-2.811,-1.406,-1.405,0.000,false,,1.645,16,29,0,0,0,24,0,1,,false
+osella,1986,Osella,FA1F / FA1G / FA1H,alfa-romeo,Alfa Romeo,Alfa Romeo,-4.679,-2.339,-2.340,0.000,false,,1.422,16,30,0,0,0,21,0,1,,false
+tyrrell,1986,Tyrrell,014 / 015,renault,Renault,Renault,-0.899,1.452,-2.351,0.000,false,,0.899,16,32,0,0,0,13,2,3,7,false
+williams,1986,Williams,FW11,honda,Honda,Honda,3.973,1.987,1.986,0.000,false,,0.505,16,32,9,4,19,6,9,1,1,true
+zakspeed,1986,Zakspeed,861,zakspeed,Zakspeed,Zakspeed,-2.678,-1.339,-1.339,0.000,false,,1.097,16,27,0,0,0,14,0,1,,false
+arrows,1987,Arrows,A10,bmw,BMW,Megatron,-0.165,-0.027,-0.138,0.000,false,,1.136,16,32,0,0,0,16,0,3,7,false
+benetton,1987,Benetton,B187,ford,Ford,Ford,1.074,-0.275,1.349,0.000,false,,1.076,16,32,0,0,2,15,0,3,5,false
+brabham,1987,Brabham,BT56,bmw,BMW,BMW,0.083,-0.027,0.110,0.000,false,,1.435,16,32,0,0,2,21,0,3,8,false
+ferrari,1987,Ferrari,F1/87,ferrari,Ferrari,Ferrari,2.464,1.232,1.232,0.000,false,,1.256,16,32,2,3,6,18,2,1,4,true
+ligier,1987,Ligier,JS29B / JS29C,bmw,BMW,Megatron,-1.768,-0.027,-1.741,0.000,false,,1.199,16,28,0,0,0,15,0,3,11,false
+lola,1987,Lola,LC87,ford,Ford,Ford,-2.300,-0.275,-2.025,0.000,false,,0.746,16,18,0,0,0,5,0,3,9,false
+lotus,1987,Lotus,99T,honda,Honda,Honda,1.088,1.468,-0.380,0.000,false,,0.478,16,32,2,1,8,5,11,2,3,true
+mclaren,1987,McLaren,MP4/3,tag,TAG,TAG,1.471,0.736,0.735,0.000,false,,0.658,16,32,3,0,12,8,3,1,2,true
+minardi,1987,Minardi,M187,motori-moderni,Motori Moderni,Motori Moderni,-2.034,-1.017,-1.017,0.000,false,,1.534,16,31,0,0,0,22,0,1,,false
+tyrrell,1987,Tyrrell,DG016,ford,Ford,Ford,-1.899,-0.275,-1.624,0.000,false,,0.359,16,32,0,0,0,3,0,3,6,false
+williams,1987,Williams,FW11B,honda,Honda,Honda,3.317,1.468,1.849,0.000,false,,0.504,16,30,9,12,18,5,11,2,1,true
+zakspeed,1987,Zakspeed,861 / 871,zakspeed,Zakspeed,Zakspeed,-1.330,-0.665,-0.665,0.000,false,,1.227,16,31,0,0,0,17,0,1,10,false
+arrows,1988,Arrows,A10B,bmw,BMW,Megatron,0.693,0.347,0.346,0.000,false,,0.968,16,32,0,0,1,11,0,1,5,false
+benetton,1988,Benetton,B188,ford,Ford,Ford,1.307,-0.213,1.520,0.000,false,,0.761,16,32,0,0,7,8,0,5,3,false
+eurobrun,1988,EuroBrun,ER188,ford,Ford,Ford,-3.086,-0.213,-2.873,0.000,false,,1.270,16,18,0,0,0,9,0,5,,false
+ferrari,1988,Ferrari,F1/87/88C,ferrari,Ferrari,Ferrari,2.596,1.298,1.298,0.000,false,,0.691,16,32,1,1,8,7,1,1,2,true
+ligier,1988,Ligier,JS31,judd,Judd,Judd,-3.017,0.608,-3.625,0.000,false,,1.207,16,24,0,0,0,11,0,3,,false
+lola,1988,Lola,LC88,ford,Ford,Ford,-1.947,-0.213,-1.734,0.000,false,,0.946,16,30,0,0,0,10,0,5,,false
+lotus,1988,Lotus,100T,honda,Honda,Honda,1.040,1.959,-0.919,0.000,false,,0.655,16,30,0,0,3,6,15,2,4,false
+march,1988,March,881,judd,Judd,Judd,0.543,0.608,-0.065,0.000,false,,1.064,16,31,0,0,2,12,0,3,6,false
+mclaren,1988,McLaren,MP4/4,honda,Honda,Honda,4.836,1.959,2.877,0.000,false,,0.346,16,32,15,15,25,2,15,2,1,true
+minardi,1988,Minardi,M188,ford,Ford,Ford,-2.154,-0.213,-1.941,0.000,false,,1.087,16,25,0,0,0,10,0,5,10,false
+tyrrell,1988,Tyrrell,017,ford,Ford,Ford,-2.093,-0.213,-1.880,0.000,false,,1.082,16,20,0,0,0,8,0,5,8,false
+williams,1988,Williams,FW12,judd,Judd,Judd,1.281,0.608,0.673,0.000,false,,1.106,16,32,0,0,2,13,0,3,7,false
+arrows,1989,Arrows,A11,ford,Ford,Ford,-0.902,-0.098,-0.804,0.000,false,,0.735,16,30,0,0,1,7,1,6,7,false
+benetton,1989,Benetton,B188 / B189,ford,Ford,Ford,0.469,-0.098,0.567,0.000,false,,0.645,16,31,1,0,4,6,1,6,4,true
+brabham,1989,Brabham,BT58,judd,Judd,Judd,-0.786,-0.557,-0.229,0.000,false,,1.208,16,29,0,0,1,13,0,3,9,false
+dallara,1989,Dallara,F189,ford,Ford,Ford,-1.039,-0.098,-0.941,0.000,false,,0.906,16,29,0,0,1,9,1,6,8,false
+ferrari,1989,Ferrari,640,ferrari,Ferrari,Ferrari,3.119,1.559,1.560,0.000,false,,1.250,16,30,3,0,9,14,3,1,3,true
+ligier,1989,Ligier,JS33,ford,Ford,Ford,-1.631,-0.098,-1.533,0.000,false,,0.864,16,21,0,0,0,6,1,6,14,false
+lola,1989,Lola,LC88B / LC89,lamborghini,Lamborghini,Lamborghini,-1.552,-0.776,-0.776,0.000,false,,1.258,16,23,0,0,0,11,0,1,15,false
+lotus,1989,Lotus,101,judd,Judd,Judd,-0.912,-0.557,-0.355,0.000,false,,0.698,16,28,0,0,0,6,0,3,6,false
+march,1989,March,881 / CG891,judd,Judd,Judd,-0.886,-0.557,-0.329,0.000,false,,1.577,16,31,0,0,1,19,0,3,12,false
+mclaren,1989,McLaren,MP4/5,honda,Honda,Honda,3.824,1.912,1.912,0.000,false,,0.489,16,32,10,15,18,4,10,1,1,true
+minardi,1989,Minardi,M188B / M189,ford,Ford,Ford,-0.986,-0.098,-0.888,0.000,false,,1.008,16,28,0,0,0,10,1,6,11,false
+tyrrell,1989,Tyrrell,017B / 018,ford,Ford,Ford,-0.763,-0.098,-0.665,0.000,false,,0.830,16,29,0,0,1,8,1,6,5,false
+williams,1989,Williams,FW12C / FW13,renault,Renault,Renault,2.045,1.023,1.022,0.000,false,,0.909,16,32,2,1,11,10,2,1,2,true
+arrows,1990,Arrows,A11 / A11B,ford,Ford,Ford,-1.857,0.608,-2.465,0.000,false,,0.786,16,25,0,0,0,6,2,6,9,false
+benetton,1990,Benetton,B189B / B190,ford,Ford,Ford,1.168,0.608,0.560,0.000,false,,0.434,16,32,2,0,8,3,2,6,3,true
+brabham,1990,Brabham,BT58 / BT59,judd,Judd,Judd,-1.827,-0.926,-0.901,0.000,false,,1.357,16,26,0,0,0,13,0,2,9,false
+dallara,1990,Dallara,F190,ford,Ford,Ford,-1.358,0.608,-1.966,0.000,false,,1.445,16,30,0,0,0,16,2,6,,false
+ferrari,1990,Ferrari,641,ferrari,Ferrari,Ferrari,2.702,1.351,1.351,0.000,false,,0.941,16,32,6,3,14,10,6,1,2,true
+leyton-house,1990,Leyton House,CG901,judd,Judd,Judd,-0.951,-0.926,-0.025,0.000,false,,1.484,16,25,0,0,1,14,0,2,7,false
+ligier,1990,Ligier,JS33B,ford,Ford,Ford,-1.546,0.608,-2.154,0.000,false,,0.519,16,31,0,0,0,4,2,6,,false
+lola,1990,Lola,LC89B / LC90,lamborghini,Lamborghini,Lamborghini,-0.584,-0.347,-0.237,0.000,false,,1.375,16,32,0,0,1,16,0,2,6,false
+lotus,1990,Lotus,102,lamborghini,Lamborghini,Lamborghini,-0.457,-0.347,-0.110,0.000,false,,1.483,16,31,0,0,0,17,0,2,8,false
+mclaren,1990,McLaren,MP4/5B,honda,Honda,Honda,3.140,1.570,1.570,0.000,false,,0.506,16,32,6,12,18,4,6,1,1,true
+minardi,1990,Minardi,M189 / M190,ford,Ford,Ford,-1.253,0.608,-1.861,0.000,false,,0.960,16,25,0,0,0,8,2,6,,false
+tyrrell,1990,Tyrrell,018 / 019,ford,Ford,Ford,0.655,0.608,0.047,0.000,false,,0.761,16,30,0,0,2,7,2,6,5,false
+williams,1990,Williams,FW13B,renault,Renault,Renault,2.169,1.085,1.084,0.000,false,,0.796,16,32,2,1,4,8,2,1,4,true
+benetton,1991,Benetton,B190B / B191,ford,Ford,Ford,0.692,0.199,0.493,0.000,false,,0.721,16,32,1,0,3,7,1,3,4,true
+brabham,1991,Brabham,BT59Y / BT60Y,yamaha,Yamaha,Yamaha,-1.669,-0.834,-0.835,0.000,false,,1.039,16,28,0,0,0,10,0,1,10,false
+dallara,1991,Dallara,F191,judd,Judd,Judd,-0.517,-1.112,0.595,0.000,false,,1.245,16,29,0,0,1,13,0,2,8,false
+ferrari,1991,Ferrari,642 / 642/2 / 643,ferrari,Ferrari,Ferrari,2.202,0.353,1.849,0.000,false,,0.961,16,31,0,0,8,10,0,2,3,false
+jordan,1991,Jordan,191,ford,Ford,Ford,-0.095,0.199,-0.294,0.000,false,,0.813,16,31,0,0,0,8,1,3,5,false
+leyton-house,1991,Leyton House,CG911,ilmor,Ilmor,Ilmor,-1.427,-0.714,-0.713,0.000,false,,1.225,16,32,0,0,0,14,0,1,12,false
+ligier,1991,Ligier,JS35 / JS35B,lamborghini,Lamborghini,Lamborghini,-2.332,-1.166,-1.166,0.000,false,,0.856,16,29,0,0,0,8,0,1,,false
+lola,1991,Lola,LC91,ford,Ford,Ford,-2.132,0.199,-2.331,0.000,false,,1.914,16,25,0,0,0,19,1,3,11,false
+lotus,1991,Lotus,102B,judd,Judd,Judd,-2.818,-1.112,-1.706,0.000,false,,0.925,16,23,0,0,0,7,0,2,9,false
+mclaren,1991,McLaren,MP4/6,honda,Honda,Honda,4.443,1.292,3.151,0.000,false,,0.721,16,32,8,10,18,7,8,2,1,true
+minardi,1991,Minardi,M191,ferrari,Ferrari,Ferrari,-1.142,0.353,-1.495,0.000,false,,0.865,16,32,0,0,0,9,0,2,7,false
+tyrrell,1991,Tyrrell,020,honda,Honda,Honda,-0.569,1.292,-1.861,0.000,false,,0.937,16,32,0,0,1,10,8,2,6,false
+williams,1991,Williams,FW14,renault,Renault,Renault,5.363,2.682,2.681,0.000,false,,0.649,16,32,7,6,17,6,7,1,2,true
+benetton,1992,Benetton,B191B / B192,ford,Ford,Ford,2.888,0.733,2.155,0.000,false,,0.684,16,32,1,0,13,6,1,3,3,true
+dallara,1992,Dallara,F192,ferrari,Ferrari,Ferrari,-1.437,-0.219,-1.218,0.000,false,,0.779,16,31,0,0,0,7,0,2,10,false
+ferrari,1992,Ferrari,F92A / F92AT,ferrari,Ferrari,Ferrari,0.779,-0.219,0.998,0.000,false,,1.140,16,32,0,0,2,12,0,2,4,false
+fondmetal,1992,Fondmetal,GR01 / GR02,ford,Ford,Ford,-2.138,0.733,-2.871,0.000,false,,1.551,16,19,0,0,0,11,1,3,,false
+footwork,1992,Footwork,FA13,mugen-honda,Mugen-Honda,Mugen-Honda,-0.801,-0.401,-0.400,0.000,false,,0.559,16,30,0,0,0,4,0,1,7,false
+jordan,1992,Jordan,192,yamaha,Yamaha,Yamaha,-2.494,-1.247,-1.247,0.000,false,,1.346,16,28,0,0,0,13,0,1,11,false
+ligier,1992,Ligier,JS37,renault,Renault,Renault,-0.604,2.305,-2.909,0.000,false,,0.935,16,31,0,0,0,9,10,2,7,false
+lotus,1992,Lotus,102D / 107,ford,Ford,Ford,-0.688,0.733,-1.421,0.000,false,,1.091,16,31,0,0,0,11,1,3,5,false
+march,1992,March,CG911B,ilmor,Ilmor,Ilmor,-2.002,-1.057,-0.945,0.000,false,,1.067,16,26,0,0,0,9,0,2,9,false
+mclaren,1992,McLaren,MP4/6B / MP4/7A,honda,Honda,Honda,4.591,2.296,2.295,0.000,false,,0.988,16,32,5,1,12,10,5,1,2,true
+minardi,1992,Minardi,M191B / M192,lamborghini,Lamborghini,Lamborghini,-2.404,-1.481,-0.923,0.000,false,,1.067,16,26,0,0,0,9,0,2,11,false
+tyrrell,1992,Tyrrell,020B,ilmor,Ilmor,Ilmor,-1.169,-1.057,-0.112,0.000,false,,1.216,16,32,0,0,0,13,0,2,6,false
+venturi,1992,Venturi,LC92,lamborghini,Lamborghini,Lamborghini,-2.039,-1.481,-0.558,0.000,false,,1.198,16,30,0,0,0,12,0,2,11,false
+williams,1992,Williams,FW14B,renault,Renault,Renault,7.519,2.305,5.214,0.000,false,,0.608,16,32,10,15,21,5,10,2,1,true
+benetton,1993,Benetton,B193 / B193B,ford,Ford,Ford,1.930,1.447,0.483,0.000,false,,0.805,16,32,1,0,11,6,6,4,3,true
+ferrari,1993,Ferrari,F93A,ferrari,Ferrari,Ferrari,0.715,-0.874,1.589,0.000,false,,1.521,16,32,0,0,3,14,0,2,4,false
+footwork,1993,Footwork,FA13B / FA14,mugen-honda,Mugen-Honda,Mugen-Honda,-0.991,-0.496,-0.495,0.000,false,,0.805,16,32,0,0,0,6,0,1,9,false
+jordan,1993,Jordan,193,hart,Hart,Hart,-1.425,-0.712,-0.713,0.000,false,,1.282,16,31,0,0,0,11,0,1,10,false
+larrousse,1993,Larrousse,LH93,lamborghini,Lamborghini,Lamborghini,-1.212,-0.606,-0.606,0.000,false,,1.163,16,32,0,0,0,10,0,1,10,false
+ligier,1993,Ligier,JS39,renault,Renault,Renault,0.704,1.613,-0.909,0.000,false,,0.358,16,32,0,0,3,1,10,2,5,false
+lola,1993,Lola,T93/30,ferrari,Ferrari,Ferrari,-3.337,-0.874,-2.463,0.000,false,,1.554,16,21,0,0,0,10,0,2,,false
+lotus,1993,Lotus,107B,ford,Ford,Ford,-0.509,1.447,-1.956,0.000,false,,0.915,16,31,0,0,0,7,6,4,6,false
+mclaren,1993,McLaren,MP4/8,ford,Ford,Ford,2.411,1.447,0.964,0.000,false,,0.716,16,32,5,1,9,5,6,4,2,true
+minardi,1993,Minardi,M193,ford,Ford,Ford,-1.071,1.447,-2.518,0.000,false,,0.716,16,32,0,0,0,5,6,4,8,false
+sauber,1993,Sauber,C12,ilmor,Ilmor,Sauber,0.765,0.382,0.383,0.000,false,,1.342,16,32,0,0,0,12,0,1,7,false
+tyrrell,1993,Tyrrell,020C / 021,yamaha,Yamaha,Yamaha,-2.115,-1.057,-1.058,0.000,false,,1.431,16,32,0,0,0,13,0,1,,false
+williams,1993,Williams,FW15C,renault,Renault,Renault,4.135,1.613,2.522,0.000,false,,0.537,16,32,10,15,22,3,10,2,1,true
+benetton,1994,Benetton,B194,ford,Ford,Ford,2.892,0.689,1.804,0.399,true,1,0.584,16,32,8,6,12,4,8,5,2,true
+ferrari,1994,Ferrari,412T1 / 412T1B,ferrari,Ferrari,Ferrari,2.484,1.242,1.159,0.083,true,6,1.168,16,32,1,3,11,11,1,1,3,true
+footwork,1994,Footwork,FA15,ford,Ford,Ford,-0.827,0.689,-1.523,0.007,true,9,1.251,16,32,0,0,0,12,8,5,9,false
+jordan,1994,Jordan,194,hart,Hart,Hart,0.642,0.321,0.241,0.080,true,7,0.769,16,31,0,1,1,6,0,1,5,false
+larrousse,1994,Larrousse,LH94,ford,Ford,Ford,-2.098,0.689,-2.566,-0.221,true,11,1.502,16,32,0,0,0,15,8,5,11,false
+ligier,1994,Ligier,JS39B,renault,Renault,Renault,-1.433,0.763,-2.408,0.212,true,4,0.334,16,32,0,0,2,1,7,2,6,false
+lotus,1994,Lotus,107C / 109,mugen-honda,Mugen-Honda,Mugen-Honda,-2.212,-1.106,-1.164,0.058,true,8,0.834,16,32,0,0,0,7,0,1,,false
+mclaren,1994,McLaren,MP4/9,peugeot,Peugeot,Peugeot,1.062,0.531,0.282,0.249,true,3,1.251,16,32,0,0,8,12,0,1,4,false
+minardi,1994,Minardi,M193B / M194,ford,Ford,Ford,-1.185,0.689,-1.759,-0.115,true,10,0.834,16,32,0,0,0,7,8,5,10,false
+sauber,1994,Sauber,C13,mercedes,Mercedes,Mercedes,0.255,0.128,0.442,-0.315,true,12,1.256,16,29,0,0,0,11,0,1,8,false
+simtek,1994,Simtek,S941,ford,Ford,Ford,-3.716,0.689,-3.805,-0.600,true,13,1.417,16,27,0,0,0,12,8,5,,false
+tyrrell,1994,Tyrrell,022,yamaha,Yamaha,Yamaha,0.413,0.206,0.102,0.105,true,5,1.084,16,32,0,0,1,10,0,1,7,false
+williams,1994,Williams,FW16 / FW16B,renault,Renault,Renault,3.723,0.763,2.698,0.262,true,2,0.598,16,31,7,6,13,4,7,2,1,true
+benetton,1995,Benetton,B195,renault,Renault,Renault,3.288,2.972,-0.157,0.473,true,1,0.308,17,34,11,4,15,1,16,2,1,true
+ferrari,1995,Ferrari,412T2,ferrari,Ferrari,Ferrari,3.701,1.851,1.638,0.212,true,3,1.154,17,34,1,1,11,12,1,1,3,true
+footwork,1995,Footwork,FA16,hart,Hart,Hart,-2.106,-1.053,-0.664,-0.389,true,10,1.231,17,34,0,0,1,13,0,1,8,false
+forti,1995,Forti,FG01,ford,Ford,Ford,-4.527,-0.713,-3.264,-0.550,true,12,1.259,17,33,0,0,0,13,0,4,,false
+jordan,1995,Jordan,195,peugeot,Peugeot,Peugeot,0.915,0.458,0.381,0.076,true,7,1.231,17,34,0,0,2,13,0,1,6,false
+ligier,1995,Ligier,JS41,mugen-honda,Mugen-Honda,Mugen-Honda,0.506,0.253,0.135,0.118,true,4,0.472,17,33,0,0,2,3,0,1,5,false
+mclaren,1995,McLaren,MP4/10 / MP4/10B / MP4/10C,mercedes,Mercedes,Mercedes,0.775,0.388,0.274,0.113,true,5,1.102,17,33,0,0,2,11,0,1,4,false
+minardi,1995,Minardi,M195,ford,Ford,Ford,-1.998,-0.713,-1.148,-0.137,true,9,0.990,17,31,0,0,0,9,0,4,10,false
+pacific,1995,Pacific,PR02,ford,Ford,Ford,-4.284,-0.713,-3.172,-0.399,true,11,1.611,17,32,0,0,0,17,0,4,,false
+sauber,1995,Sauber,C14,ford,Ford,Ford,-0.142,-0.713,0.491,0.080,true,6,0.769,17,34,0,0,1,7,0,4,7,false
+tyrrell,1995,Tyrrell,023,yamaha,Yamaha,Yamaha,-1.757,-0.878,-0.909,0.030,true,8,0.846,17,34,0,0,0,8,0,1,9,false
+williams,1995,Williams,FW17 / FW17B,renault,Renault,Renault,5.628,2.972,2.282,0.374,true,2,0.846,17,34,5,12,17,8,16,2,2,true
+benetton,1996,Benetton,B196,renault,Renault,Renault,2.249,2.341,-0.137,0.045,true,6,0.887,16,32,0,0,10,7,12,2,3,false
+ferrari,1996,Ferrari,F310,ferrari,Ferrari,Ferrari,1.728,0.864,0.535,0.329,true,1,1.180,16,31,3,4,9,10,3,1,2,true
+footwork,1996,Footwork,FA17,hart,Hart,Hart,-2.176,-1.088,-0.488,-0.600,true,10,1.153,16,32,0,0,0,10,0,1,9,false
+jordan,1996,Jordan,196,peugeot,Peugeot,Peugeot,-0.038,-0.019,0.017,-0.036,true,8,0.799,16,32,0,0,0,6,0,1,5,false
+ligier,1996,Ligier,JS43,mugen-honda,Mugen-Honda,Mugen-Honda,-0.902,-0.451,-0.519,0.068,true,5,1.153,16,32,1,0,1,10,1,1,6,true
+mclaren,1996,McLaren,MP4/11 / MP4/11B,mercedes,Mercedes,Mercedes,0.668,0.334,0.260,0.074,true,4,0.710,16,32,0,0,6,5,0,1,4,false
+minardi,1996,Minardi,M195B,ford,Ford,Ford,-3.990,-1.613,-2.192,-0.185,true,9,1.143,16,29,0,0,0,9,0,2,,false
+sauber,1996,Sauber,C15,ford,Ford,Ford,-0.849,-1.613,0.521,0.243,true,2,1.180,16,31,0,0,1,10,0,2,7,false
+tyrrell,1996,Tyrrell,024,yamaha,Yamaha,Yamaha,-1.466,-0.733,-0.773,0.040,true,7,1.153,16,32,0,0,0,10,0,1,8,false
+williams,1996,Williams,FW18,renault,Renault,Renault,4.774,2.341,2.213,0.220,true,3,0.532,16,32,12,12,21,3,12,2,1,true
+arrows,1997,Arrows,A18,yamaha,Yamaha,Yamaha,-1.290,-0.645,-0.045,-0.600,true,11,1.257,17,33,0,0,1,11,0,1,8,false
+benetton,1997,Benetton,B197,renault,Renault,Renault,1.120,1.605,-0.337,-0.148,true,8,0.439,17,34,1,2,8,2,9,2,3,true
+ferrari,1997,Ferrari,F310B,ferrari,Ferrari,Ferrari,1.273,0.357,0.513,0.403,true,2,0.615,17,34,5,3,13,4,5,2,2,true
+jordan,1997,Jordan,197,peugeot,Peugeot,Peugeot,0.442,0.221,0.400,-0.179,true,10,0.703,17,34,0,0,3,5,0,1,5,false
+mclaren,1997,McLaren,MP4/12,mercedes,Mercedes,Mercedes,1.792,0.896,0.490,0.406,true,1,1.054,17,34,3,1,7,9,3,1,4,true
+minardi,1997,Minardi,M197,hart,Hart,Hart,-2.995,-1.497,-1.327,-0.171,true,9,1.285,17,32,0,0,0,11,0,1,,false
+prost,1997,Prost,JS45,mugen-honda,Mugen-Honda,Mugen-Honda,-0.380,-0.190,-0.078,-0.112,true,6,1.054,17,34,0,0,2,9,0,1,6,false
+sauber,1997,Sauber,C16,ferrari,Ferrari,Petronas,-0.203,0.357,-0.677,0.117,true,5,0.539,17,33,0,0,1,3,5,2,7,false
+stewart,1997,Stewart,SF01,ford,Ford,Ford,-1.005,-1.151,0.262,-0.116,true,7,2.065,17,33,0,0,1,20,0,2,9,false
+tyrrell,1997,Tyrrell,025,ford,Ford,Ford,-2.449,-1.151,-1.575,0.277,true,3,1.493,17,34,0,0,0,14,0,2,10,false
+williams,1997,Williams,FW19,renault,Renault,Renault,3.695,1.605,1.909,0.181,true,4,0.527,17,34,8,11,15,3,9,2,1,true
+arrows,1998,Arrows,A19,arrows,Arrows,Arrows,-1.307,-0.654,-0.297,-0.356,true,10,1.657,16,31,0,0,0,15,0,1,7,false
+benetton,1998,Benetton,B198,renault,Renault,Playlife,1.223,0.698,0.453,0.072,true,5,0.540,16,32,0,1,2,3,0,2,5,false
+ferrari,1998,Ferrari,F300,ferrari,Ferrari,Ferrari,2.680,0.914,1.171,0.595,true,1,0.540,16,32,6,3,19,3,6,2,2,true
+jordan,1998,Jordan,198,mugen-honda,Mugen-Honda,Mugen-Honda,0.735,0.368,0.362,0.005,true,6,0.990,16,32,1,0,3,8,1,1,4,true
+mclaren,1998,McLaren,MP4/13,mercedes,Mercedes,Mercedes,4.913,2.456,2.153,0.304,true,2,0.720,16,32,9,12,20,5,9,1,1,true
+minardi,1998,Minardi,M198,ford,Ford,Ford,-2.680,-1.329,-0.841,-0.510,true,11,1.259,16,32,0,0,0,11,0,3,,false
+prost,1998,Prost,AP01,peugeot,Peugeot,Peugeot,-2.362,-1.181,-1.051,-0.130,true,7,1.289,16,31,0,0,0,11,0,1,9,false
+sauber,1998,Sauber,C17,ferrari,Ferrari,Petronas,0.062,0.914,-1.116,0.264,true,3,0.720,16,32,0,0,1,5,6,2,6,false
+stewart,1998,Stewart,SF02,ford,Ford,Ford,-1.308,-1.329,0.165,-0.144,true,8,1.749,16,31,0,0,0,16,0,3,8,false
+tyrrell,1998,Tyrrell,026,ford,Ford,Ford,-2.829,-1.329,-1.311,-0.189,true,9,1.251,16,26,0,0,0,9,0,3,,false
+williams,1998,Williams,FW20,renault,Renault,Mecachrome,0.873,0.698,0.086,0.089,true,4,0.360,16,32,0,0,3,1,0,2,3,false
+arrows,1999,Arrows,A20,arrows,Arrows,Arrows,-3.171,-1.586,-1.345,-0.240,true,8,1.546,16,32,0,0,0,16,0,1,9,false
+bar,1999,BAR,01,renault,Renault,Supertec,-1.198,0.009,-0.744,-0.463,true,11,1.584,16,31,0,0,0,16,0,3,,false
+benetton,1999,Benetton,B199,renault,Renault,Playlife,-0.533,0.009,-0.615,0.073,true,5,0.732,16,32,0,0,1,6,0,3,6,false
+ferrari,1999,Ferrari,F399,ferrari,Ferrari,Ferrari,2.104,0.417,1.278,0.409,true,1,0.417,16,31,6,3,17,2,6,2,1,true
+jordan,1999,Jordan,199,mugen-honda,Mugen-Honda,Mugen-Honda,1.488,0.744,0.398,0.346,true,2,0.651,16,32,2,1,6,5,2,1,3,true
+mclaren,1999,McLaren,MP4/14,mercedes,Mercedes,Mercedes,4.119,2.060,1.795,0.264,true,4,0.977,16,32,7,11,16,9,7,1,2,true
+minardi,1999,Minardi,M01,ford,Ford,Ford,-2.644,-0.639,-1.596,-0.409,true,10,0.977,16,32,0,0,0,9,1,2,10,false
+prost,1999,Prost,AP02,peugeot,Peugeot,Peugeot,-0.597,-0.299,-0.624,0.326,true,3,1.084,16,31,0,0,1,10,0,1,7,false
+sauber,1999,Sauber,C18,ferrari,Ferrari,Petronas,-0.854,0.417,-1.274,0.003,true,6,1.058,16,32,0,0,0,10,6,2,8,false
+stewart,1999,Stewart,SF3,ford,Ford,Ford,0.727,-0.639,1.653,-0.287,true,9,1.000,16,31,1,1,4,9,1,2,4,true
+williams,1999,Williams,FW21,renault,Renault,Supertec,0.558,0.009,0.571,-0.022,true,7,0.977,16,32,0,0,3,9,0,3,5,false
+arrows,2000,Arrows,A21,renault,Renault,Supertec,-1.138,-0.593,0.055,-0.600,true,11,1.406,17,33,0,0,0,12,0,2,7,false
+bar,2000,BAR,002,honda,Honda,Honda,-0.307,-0.154,-0.266,0.113,true,4,0.825,17,34,0,0,0,6,0,1,5,false
+benetton,2000,Benetton,B200,renault,Renault,Playlife,-0.642,-0.593,-0.031,-0.018,true,9,0.642,17,34,0,0,3,4,0,2,4,false
+ferrari,2000,Ferrari,F1-2000,ferrari,Ferrari,Ferrari,4.478,1.223,2.864,0.391,true,1,0.734,17,34,10,10,21,5,10,2,1,true
+jaguar,2000,Jaguar,R1,cosworth,Cosworth,Cosworth,-1.076,-0.538,-0.100,-0.438,true,10,0.825,17,34,0,0,0,6,0,1,9,false
+jordan,2000,Jordan,EJ10 / EJ10B,mugen-honda,Mugen-Honda,Mugen-Honda,-0.054,-0.027,-0.114,0.087,true,5,1.192,17,34,0,0,2,10,0,1,6,false
+mclaren,2000,McLaren,MP4/15,mercedes,Mercedes,Mercedes,4.954,2.477,2.216,0.261,true,3,0.642,17,34,7,7,22,4,7,1,2,true
+minardi,2000,Minardi,M02,ford,Ford,Fondmetal,-3.097,-1.549,-1.539,-0.009,true,8,1.101,17,34,0,0,0,9,0,1,10,false
+prost,2000,Prost,AP03,peugeot,Peugeot,Peugeot,-2.682,-1.341,-1.384,0.043,true,6,1.781,17,33,0,0,0,16,0,1,11,false
+sauber,2000,Sauber,C19,ferrari,Ferrari,Petronas,-0.809,1.223,-2.298,0.266,true,2,0.766,17,32,0,0,0,5,10,2,8,false
+williams,2000,Williams,FW22,bmw,BMW,BMW,0.375,0.187,0.189,-0.001,true,7,1.101,17,34,0,0,3,9,0,1,3,false
+arrows,2001,Arrows,A22,asiatech,Asiatech,Asiatech,-2.273,-1.137,-0.944,-0.192,true,8,1.153,17,34,0,0,0,11,0,1,10,false
+bar,2001,BAR,003,honda,Honda,Honda,-0.241,0.001,-0.215,-0.027,true,4,0.988,17,34,0,0,2,9,0,2,6,false
+benetton,2001,Benetton,B201,renault,Renault,Renault,-2.210,-1.105,-1.048,-0.057,true,6,0.906,17,34,0,0,1,8,0,1,7,false
+ferrari,2001,Ferrari,F2001,ferrari,Ferrari,Ferrari,4.227,1.459,2.362,0.406,true,2,0.494,17,34,9,11,24,3,9,3,1,true
+jaguar,2001,Jaguar,R2,cosworth,Cosworth,Cosworth,-0.945,-0.472,-0.441,-0.032,true,5,1.153,17,34,0,0,1,11,0,1,8,false
+jordan,2001,Jordan,EJ11,honda,Honda,Honda,0.246,0.001,0.504,-0.259,true,10,0.906,17,34,0,0,0,8,0,2,5,false
+mclaren,2001,McLaren,MP4-16,mercedes,Mercedes,Mercedes,3.631,1.815,1.216,0.600,true,1,1.095,17,33,4,2,13,10,4,1,2,true
+minardi,2001,Minardi,PS01 / PS01B,ford,Ford,European,-4.641,-2.320,-1.983,-0.338,true,11,1.601,17,33,0,0,0,16,0,1,11,false
+prost,2001,Prost,AP04,ferrari,Ferrari,Acer,-1.762,1.459,-3.028,-0.193,true,9,0.824,17,34,0,0,0,7,9,3,9,false
+sauber,2001,Sauber,C20,ferrari,Ferrari,Petronas,0.150,1.459,-1.310,0.001,true,3,0.741,17,34,0,0,1,6,9,3,4,false
+williams,2001,Williams,FW23,bmw,BMW,BMW,3.818,1.909,1.968,-0.059,true,7,1.153,17,34,4,4,9,11,4,1,3,true
+arrows,2002,Arrows,A23,cosworth,Cosworth,Cosworth,-2.104,-1.236,-0.878,0.010,true,6,1.516,17,22,0,0,0,11,0,2,11,false
+bar,2002,BAR,004,honda,Honda,Honda,-0.774,-0.438,-0.282,-0.054,true,7,1.346,17,34,0,0,0,14,0,2,8,false
+ferrari,2002,Ferrari,F2001B / F2002,ferrari,Ferrari,Ferrari,5.127,1.614,3.295,0.218,true,5,0.414,17,32,15,10,27,2,15,2,1,true
+jaguar,2002,Jaguar,R3 / R3B,cosworth,Cosworth,Cosworth,-1.605,-1.236,-0.133,-0.236,true,8,1.504,17,34,0,0,1,16,0,2,7,false
+jordan,2002,Jordan,EJ12,honda,Honda,Honda,-0.539,-0.438,0.260,-0.361,true,10,0.972,17,33,0,0,0,9,0,2,6,false
+mclaren,2002,McLaren,MP4-17,mercedes,Mercedes,Mercedes,2.185,1.093,0.753,0.339,true,2,1.108,17,34,1,0,10,11,1,1,3,true
+minardi,2002,Minardi,PS02,asiatech,Asiatech,Asiatech,-3.637,-1.819,-1.273,-0.545,true,11,1.159,17,29,0,0,0,10,0,1,9,false
+renault,2002,Renault,R202,renault,Renault,Renault,0.180,0.090,-0.159,0.249,true,4,0.950,17,34,0,0,0,9,0,1,4,false
+sauber,2002,Sauber,C21,ferrari,Ferrari,Petronas,-0.285,1.614,-2.149,0.250,true,3,0.554,17,34,0,0,0,4,15,2,5,false
+toyota,2002,Toyota,TF102,toyota,Toyota,Toyota,-1.470,-0.735,-0.477,-0.258,true,9,1.053,17,33,0,0,0,10,0,1,10,false
+williams,2002,Williams,FW24,bmw,BMW,BMW,2.921,1.461,1.072,0.388,true,1,0.554,17,34,1,7,13,4,1,1,2,true
+bar,2003,BAR,005,honda,Honda,Honda,-0.545,-0.273,-0.106,-0.166,true,8,1.374,16,30,0,0,0,11,0,1,5,false
+ferrari,2003,Ferrari,F2002B / F2003-GA,ferrari,Ferrari,Ferrari,2.570,0.445,1.907,0.218,true,3,0.469,16,32,8,8,16,2,8,2,1,true
+jaguar,2003,Jaguar,R4,cosworth,Cosworth,Cosworth,-0.831,-1.326,0.578,-0.083,true,7,1.218,16,32,0,0,0,10,0,2,7,false
+jordan,2003,Jordan,EJ13,ford,Ford,Ford,-1.133,-0.567,-0.178,-0.388,true,9,1.406,16,32,1,0,1,12,1,1,9,true
+mclaren,2003,McLaren,MP4-17D,mercedes,Mercedes,Mercedes,1.820,0.910,0.749,0.161,true,5,0.750,16,32,2,2,13,5,2,1,3,true
+minardi,2003,Minardi,PS03,cosworth,Cosworth,Cosworth,-3.148,-1.326,-1.222,-0.600,true,10,1.124,16,32,0,0,0,9,0,2,10,false
+renault,2003,Renault,R23 / R23B,renault,Renault,Renault,0.737,0.368,0.068,0.301,true,1,1.031,16,32,1,2,5,8,1,1,4,true
+sauber,2003,Sauber,C22,ferrari,Ferrari,Petronas,-1.236,0.445,-1.818,0.137,true,6,1.054,16,31,0,0,1,8,8,2,6,false
+toyota,2003,Toyota,TF103,toyota,Toyota,Toyota,-0.492,-0.246,-0.430,0.184,true,4,1.124,16,32,0,0,0,9,0,1,8,false
+williams,2003,Williams,FW25,bmw,BMW,BMW,2.258,1.129,0.846,0.283,true,2,0.469,16,32,4,4,12,2,4,1,2,true
+bar,2004,BAR,006,honda,Honda,Honda,1.921,0.960,0.834,0.127,true,5,1.087,18,36,0,1,11,7,0,1,2,false
+ferrari,2004,Ferrari,F2004,ferrari,Ferrari,Ferrari,3.856,1.135,2.447,0.274,true,3,0.326,18,36,15,12,29,0,15,2,1,true
+jaguar,2004,Jaguar,R5 / R5B,cosworth,Cosworth,Cosworth,-0.871,-1.572,1.106,-0.405,true,9,1.087,18,36,0,0,0,7,0,2,7,false
+jordan,2004,Jordan,EJ14,ford,Ford,Ford,-2.618,-1.309,-0.972,-0.337,true,8,1.522,18,36,0,0,0,11,0,1,9,false
+mclaren,2004,McLaren,MP4-19 / MP4-19B,mercedes,Mercedes,Mercedes,0.627,0.313,0.494,-0.180,true,7,1.413,18,36,1,1,4,10,1,1,5,true
+minardi,2004,Minardi,PS04,cosworth,Cosworth,Cosworth,-3.845,-1.572,-1.823,-0.450,true,10,1.196,18,36,0,0,0,8,0,2,10,false
+renault,2004,Renault,R24 / R24B,renault,Renault,Renault,0.994,0.497,0.124,0.373,true,1,0.978,18,36,1,3,6,6,1,1,3,true
+sauber,2004,Sauber,C23,ferrari,Ferrari,Petronas,-0.452,1.135,-1.641,0.054,true,6,0.543,18,36,0,0,0,2,15,2,6,false
+toyota,2004,Toyota,TF104 / TF104B,toyota,Toyota,Toyota,-1.149,-0.575,-0.906,0.332,true,2,0.978,18,36,0,0,0,6,0,1,8,false
+williams,2004,Williams,FW26,bmw,BMW,BMW,1.539,0.769,0.558,0.212,true,4,0.870,18,36,1,1,4,5,1,1,4,true
+bar,2005,BAR,006,honda,Honda,Honda,0.657,0.329,0.573,-0.245,true,9,1.304,19,32,0,1,2,6,0,1,6,false
+ferrari,2005,Ferrari,F2004M / F2005,ferrari,Ferrari,Ferrari,0.530,-0.071,0.091,0.510,true,1,0.917,19,38,1,1,9,4,1,2,3,true
+jordan,2005,Jordan,EJ15 / EJ15B,toyota,Toyota,Toyota,-2.903,-0.696,-2.185,-0.022,true,7,1.048,19,38,0,0,1,5,0,2,9,false
+mclaren,2005,McLaren,MP4-20,mercedes,Mercedes,Mercedes,2.639,1.320,1.135,0.184,true,3,1.083,19,36,10,7,18,5,10,1,2,true
+minardi,2005,Minardi,PS04B / PS05,cosworth,Cosworth,Cosworth,-4.075,-1.367,-2.108,-0.600,true,10,1.572,19,38,0,0,0,9,0,2,10,false
+red-bull,2005,Red Bull,RB1,cosworth,Cosworth,Cosworth,-0.025,-1.367,1.320,0.022,true,5,0.826,19,35,0,0,0,3,0,2,7,false
+renault,2005,Renault,R25,renault,Renault,Renault,2.820,1.410,1.398,0.012,true,6,0.812,19,36,8,7,18,3,8,1,1,true
+sauber,2005,Sauber,C24,ferrari,Ferrari,Petronas,-0.743,-0.071,-0.523,-0.149,true,8,0.948,19,36,0,0,0,4,1,2,8,false
+toyota,2005,Toyota,TF105 / TF105B,toyota,Toyota,Toyota,0.814,-0.696,1.238,0.272,true,2,0.541,19,36,0,2,5,1,0,2,4,false
+williams,2005,Williams,FW27,bmw,BMW,BMW,0.285,0.143,0.061,0.081,true,4,0.948,19,36,0,1,4,4,0,1,5,false
+bmw-sauber,2006,BMW Sauber,F1.06,bmw,BMW,BMW,-0.266,-0.133,-0.332,0.199,true,5,0.778,18,36,0,0,2,4,0,1,5,false
+ferrari,2006,Ferrari,248 F1,ferrari,Ferrari,Ferrari,3.327,0.900,2.183,0.244,true,3,0.444,18,36,9,7,19,1,9,2,2,true
+honda,2006,Honda,RA106,honda,Honda,Honda,1.317,-0.907,2.122,0.102,true,6,1.000,18,36,1,1,3,6,1,2,4,true
+mclaren,2006,McLaren,MP4-21,mercedes,Mercedes,Mercedes,2.043,1.021,1.085,-0.063,true,7,1.000,18,36,0,3,9,6,0,1,3,false
+midland,2006,Midland,M16,toyota,Toyota,Toyota,-2.881,-0.927,-1.354,-0.600,true,11,1.000,18,36,0,0,0,6,0,2,10,false
+red-bull,2006,Red Bull,RB2,ferrari,Ferrari,Ferrari,-0.627,0.900,-1.747,0.220,true,4,1.222,18,36,0,0,1,8,9,2,7,false
+renault,2006,Renault,R26,renault,Renault,Renault,3.286,1.643,1.266,0.377,true,1,0.667,18,36,8,7,19,3,8,1,1,true
+super-aguri,2006,Super Aguri,SA05 / SA06,honda,Honda,Honda,-4.038,-0.907,-2.892,-0.239,true,9,1.667,18,36,0,0,0,12,1,2,11,false
+toro-rosso,2006,Toro Rosso,STR1,cosworth,Cosworth,Cosworth,-1.694,-0.753,-0.649,-0.292,true,10,0.556,18,36,0,0,0,2,0,2,9,false
+toyota,2006,Toyota,TF106 / TF106B,toyota,Toyota,Toyota,0.099,-0.927,0.770,0.256,true,2,1.333,18,36,0,0,1,9,0,2,6,false
+williams,2006,Williams,FW28,cosworth,Cosworth,Cosworth,-0.565,-0.753,0.310,-0.122,true,8,1.333,18,36,0,0,0,9,0,2,8,false
+bmw-sauber,2007,BMW Sauber,F1.07,bmw,BMW,BMW,1.591,0.796,0.446,0.349,true,1,0.939,17,34,0,0,2,4,0,1,2,false
+ferrari,2007,Ferrari,F2007,ferrari,Ferrari,Ferrari,4.245,0.766,3.486,-0.007,true,7,0.805,17,34,9,9,22,3,9,3,1,true
+honda,2007,Honda,RA107,honda,Honda,Honda,-1.385,-1.120,-0.384,0.119,true,5,1.073,17,34,0,0,0,5,0,2,8,false
+mclaren,2007,McLaren,MP4-22,mercedes,Mercedes,Mercedes,3.579,1.789,1.462,0.328,true,3,0.402,17,34,8,8,24,0,8,1,,true
+red-bull,2007,Red Bull,RB3,renault,Renault,Renault,0.083,0.310,-0.571,0.344,true,2,1.744,17,34,0,0,1,10,0,2,5,false
+renault,2007,Renault,R27,renault,Renault,Renault,0.848,0.310,0.448,0.090,true,6,0.537,17,34,0,0,1,1,0,2,3,false
+spyker,2007,Spyker,F8-VII / F8-VIIB,ferrari,Ferrari,Ferrari,-4.075,0.766,-4.241,-0.600,true,11,1.073,17,34,0,0,0,5,9,3,10,false
+super-aguri,2007,Super Aguri,SA07,honda,Honda,Honda,-1.975,-1.120,-0.721,-0.134,true,8,1.073,17,34,0,0,0,5,0,2,9,false
+toro-rosso,2007,Toro Rosso,STR2,ferrari,Ferrari,Ferrari,-1.946,0.766,-2.470,-0.242,true,9,1.476,17,34,0,0,0,8,9,3,7,false
+toyota,2007,Toyota,TF107,toyota,Toyota,Toyota,-0.618,-0.322,-0.429,0.133,true,4,1.073,17,34,0,0,0,5,0,2,6,false
+williams,2007,Williams,FW29,toyota,Toyota,Toyota,-0.347,-0.322,0.319,-0.344,true,10,0.805,17,34,0,0,1,3,0,2,4,false
+bmw-sauber,2008,BMW Sauber,F1.08,bmw,BMW,BMW,1.116,0.558,0.234,0.324,true,2,0.514,18,36,1,1,11,0,1,1,3,true
+ferrari,2008,Ferrari,F2008,ferrari,Ferrari,Ferrari,2.556,0.757,1.643,0.156,true,3,0.857,18,36,8,8,19,2,9,3,1,true
+force-india,2008,Force India,VJM01,ferrari,Ferrari,Ferrari,-3.099,0.757,-3.474,-0.382,true,9,1.885,18,36,0,0,0,8,9,3,10,false
+honda,2008,Honda,RA108,honda,Honda,Honda,-1.703,-0.852,-0.967,0.116,true,4,0.857,18,36,0,0,1,2,0,1,9,false
+mclaren,2008,McLaren,MP4-23,mercedes,Mercedes,Mercedes,2.168,1.084,1.147,-0.063,true,7,1.028,18,36,6,8,13,3,6,1,2,true
+red-bull,2008,Red Bull,RB4,renault,Renault,Renault,-0.292,0.004,-0.070,-0.226,true,8,0.857,18,36,0,0,1,2,2,2,7,false
+renault,2008,Renault,R28,renault,Renault,Renault,0.304,0.004,0.233,0.067,true,5,1.028,18,36,2,0,4,3,2,2,4,true
+toro-rosso,2008,Toro Rosso,STR2B / STR3,ferrari,Ferrari,Ferrari,-0.284,0.757,-1.559,0.518,true,1,1.028,18,36,1,1,1,3,9,3,6,true
+toyota,2008,Toyota,TF108,toyota,Toyota,Toyota,0.265,-0.256,0.498,0.023,true,6,1.028,18,36,0,0,2,3,0,2,5,false
+williams,2008,Williams,FW30,toyota,Toyota,Toyota,-1.032,-0.256,-0.244,-0.532,true,10,0.685,18,36,0,0,2,1,0,2,8,false
+bmw-sauber,2009,BMW Sauber,F1.09,bmw,BMW,BMW,-0.783,-0.391,-0.762,0.370,true,2,1.126,17,34,0,0,2,4,0,1,6,false
+brawn,2009,Brawn,BGP 001,mercedes,Mercedes,Mercedes,2.365,0.862,1.220,0.283,true,3,0.643,17,34,8,5,15,1,10,3,1,true
+ferrari,2009,Ferrari,F60,ferrari,Ferrari,Ferrari,0.120,-0.506,1.167,-0.541,true,10,1.143,17,33,1,0,6,4,1,2,4,true
+force-india,2009,Force India,VJM02,mercedes,Mercedes,Mercedes,-1.068,0.862,-1.731,-0.199,true,8,0.965,17,34,0,1,1,3,10,3,9,false
+mclaren,2009,McLaren,MP4-24,mercedes,Mercedes,Mercedes,0.221,0.862,-0.715,0.074,true,4,0.804,17,34,2,4,5,2,10,3,3,true
+red-bull,2009,Red Bull,RB5,renault,Renault,Renault,2.070,0.311,2.064,-0.305,true,9,0.965,17,34,6,5,16,3,6,2,2,true
+renault,2009,Renault,R29,renault,Renault,Renault,-1.136,0.311,-1.308,-0.139,true,7,1.126,17,34,0,1,1,4,6,2,8,false
+toro-rosso,2009,Toro Rosso,STR4,ferrari,Ferrari,Ferrari,-1.639,-0.506,-1.141,0.008,true,5,1.608,17,34,0,0,0,7,1,2,10,false
+toyota,2009,Toyota,TF109,toyota,Toyota,Toyota,0.418,-0.050,-0.013,0.481,true,1,0.653,17,33,0,1,5,1,0,2,5,false
+williams,2009,Williams,FW31,toyota,Toyota,Toyota,-0.568,-0.050,-0.485,-0.033,true,6,0.965,17,34,0,0,0,3,0,2,7,false
+ferrari,2010,Ferrari,F10,ferrari,Ferrari,Ferrari,2.432,0.744,1.489,0.199,true,4,0.384,19,38,5,2,15,0,5,3,3,true
+force-india,2010,Force India,VJM03,mercedes,Mercedes,Mercedes,0.039,1.310,-1.304,0.033,true,8,0.897,19,38,0,0,0,4,5,3,7,false
+hrt,2010,HRT,F110,cosworth,Cosworth,Cosworth,-4.802,-0.968,-3.234,-0.600,true,12,1.538,19,38,0,0,0,9,0,4,11,false
+lotus-racing,2010,Lotus Racing,T127,cosworth,Cosworth,Cosworth,-3.245,-0.968,-1.810,-0.467,true,11,1.589,19,36,0,0,0,9,0,4,10,false
+mclaren,2010,McLaren,MP4-25,mercedes,Mercedes,Mercedes,2.908,1.310,1.384,0.214,true,3,0.641,19,38,5,1,16,2,5,3,2,true
+mercedes,2010,Mercedes,MGP W01,mercedes,Mercedes,Mercedes,1.021,1.310,-0.610,0.321,true,1,0.641,19,38,0,0,3,2,5,3,4,false
+red-bull,2010,Red Bull,RB6,renault,Renault,Renault,4.622,0.923,3.387,0.312,true,2,0.641,19,38,9,15,20,2,9,2,1,true
+renault,2010,Renault,R30,renault,Renault,Renault,1.147,0.923,0.112,0.112,true,7,0.897,19,38,0,0,3,4,9,2,5,false
+sauber,2010,Sauber,C29,ferrari,Ferrari,Ferrari,-0.199,0.744,-1.073,0.130,true,5,1.563,19,37,0,0,0,9,5,3,8,false
+toro-rosso,2010,Toro Rosso,STR5,ferrari,Ferrari,Ferrari,-0.583,0.744,-1.244,-0.083,true,9,0.769,19,38,0,0,0,3,5,3,9,false
+virgin,2010,Virgin,VR-01,cosworth,Cosworth,Cosworth,-3.682,-0.968,-2.517,-0.197,true,10,1.987,19,36,0,0,0,12,0,4,12,false
+williams,2010,Williams,FW32,cosworth,Cosworth,Cosworth,0.342,-0.968,1.187,0.123,true,6,0.513,19,38,0,1,0,1,0,4,6,false
+ferrari,2011,Ferrari,150° Italia,ferrari,Ferrari,Ferrari,3.500,0.949,2.374,0.177,true,5,0.728,19,38,1,0,10,2,1,3,3,true
+force-india,2011,Force India,VJM04,mercedes,Mercedes,Mercedes,-0.041,2.093,-2.337,0.203,true,4,0.728,19,38,0,0,0,2,6,3,6,false
+hrt,2011,HRT,F111,cosworth,Cosworth,Cosworth,-6.083,-2.121,-3.362,-0.600,true,12,1.501,19,36,0,0,0,7,0,3,11,false
+lotus-racing,2011,Lotus Racing,T128,renault,Renault,Renault,-3.265,1.454,-4.536,-0.183,true,10,1.602,19,38,0,0,0,8,12,3,10,false
+mclaren,2011,McLaren,MP4-26,mercedes,Mercedes,Mercedes,5.031,2.093,2.640,0.298,true,3,0.874,19,38,6,1,18,3,6,3,2,true
+mercedes,2011,Mercedes,MGP W02,mercedes,Mercedes,Mercedes,1.247,2.093,-1.199,0.353,true,1,0.728,19,38,0,0,0,2,6,3,4,false
+red-bull,2011,Red Bull,RB7,renault,Renault,Renault,6.958,1.454,5.162,0.342,true,2,0.437,19,38,12,18,27,0,12,3,1,true
+renault,2011,Renault,R31,renault,Renault,Renault,0.403,1.454,-1.102,0.051,true,6,0.582,19,38,0,0,2,1,12,3,5,false
+sauber,2011,Sauber,C30,ferrari,Ferrari,Ferrari,-0.653,0.949,-1.421,-0.181,true,9,1.182,19,37,0,0,0,5,1,3,7,false
+toro-rosso,2011,Toro Rosso,STR6,ferrari,Ferrari,Ferrari,-0.733,0.949,-1.607,-0.075,true,8,1.019,19,38,0,0,0,4,1,3,8,false
+virgin,2011,Virgin,MVR-02,cosworth,Cosworth,Cosworth,-4.655,-2.121,-2.272,-0.262,true,11,1.182,19,37,0,0,0,5,0,3,12,false
+williams,2011,Williams,FW33,cosworth,Cosworth,Cosworth,-1.709,-2.121,0.404,0.008,true,7,1.456,19,38,0,0,0,7,0,3,9,false
+caterham,2012,Caterham,CT01,renault,Renault,Renault,-2.022,1.566,-3.408,-0.180,true,10,1.023,20,39,0,0,0,3,9,4,10,false
+ferrari,2012,Ferrari,F2012,ferrari,Ferrari,Ferrari,1.774,0.732,0.769,0.273,true,3,0.505,20,40,3,2,15,0,3,3,2,true
+force-india,2012,Force India,VJM05,mercedes,Mercedes,Mercedes,0.196,1.027,-0.872,0.041,true,7,0.505,20,40,0,0,0,0,8,3,7,false
+hrt,2012,HRT,F112,cosworth,Cosworth,Cosworth,-4.399,-2.534,-1.265,-0.600,true,12,1.898,20,38,0,0,0,8,0,2,12,false
+lotus-f1,2012,Lotus,E20,renault,Renault,Renault,1.658,1.566,0.045,0.047,true,6,0.673,20,40,1,0,10,1,9,4,4,true
+marussia,2012,Marussia,MR01,cosworth,Cosworth,Cosworth,-3.202,-2.534,-0.418,-0.250,true,11,1.534,20,39,0,0,0,6,0,2,11,false
+mclaren,2012,McLaren,MP4-27,mercedes,Mercedes,Mercedes,2.492,1.027,1.111,0.354,true,1,1.010,20,40,7,8,13,3,8,3,3,true
+mercedes,2012,Mercedes,F1 W03,mercedes,Mercedes,Mercedes,0.589,1.027,-0.660,0.222,true,4,1.347,20,40,1,1,3,5,8,3,5,true
+red-bull,2012,Red Bull,RB8,renault,Renault,Renault,3.040,1.566,1.136,0.338,true,2,0.842,20,40,7,8,14,2,9,4,1,true
+sauber,2012,Sauber,C31,ferrari,Ferrari,Ferrari,0.424,0.732,-0.169,-0.139,true,9,0.842,20,40,0,0,4,2,3,3,6,false
+toro-rosso,2012,Toro Rosso,STR7,ferrari,Ferrari,Ferrari,-1.123,0.732,-1.947,0.092,true,5,1.010,20,40,0,0,0,3,3,3,9,false
+williams,2012,Williams,FW34,renault,Renault,Renault,0.573,1.566,-0.962,-0.031,true,8,0.842,20,40,1,1,1,2,9,4,8,true
+caterham,2013,Caterham,CT03,renault,Renault,Renault,-3.391,2.301,-5.176,-0.516,true,11,1.516,19,38,0,0,0,5,14,4,11,false
+ferrari,2013,Ferrari,F138,ferrari,Ferrari,Ferrari,1.873,0.450,1.077,0.346,true,2,0.758,19,38,2,0,10,1,2,3,3,true
+force-india,2013,Force India,VJM06,mercedes,Mercedes,Mercedes,-0.269,0.810,-1.031,-0.048,true,6,1.137,19,38,0,0,0,3,3,3,6,false
+lotus-f1,2013,Lotus,E21,renault,Renault,Renault,1.993,2.301,-0.414,0.106,true,5,1.326,19,38,1,0,14,4,14,4,4,true
+marussia,2013,Marussia,MR02,cosworth,Cosworth,Cosworth,-4.009,-2.004,-1.723,-0.282,true,9,0.758,19,38,0,0,0,1,0,1,10,false
+mclaren,2013,McLaren,MP4-28,mercedes,Mercedes,Mercedes,-0.003,0.810,-1.138,0.325,true,3,0.568,19,38,0,0,0,0,3,3,5,false
+mercedes,2013,Mercedes,F1 W04,mercedes,Mercedes,Mercedes,2.434,0.810,1.335,0.289,true,4,0.947,19,38,3,8,9,2,3,3,2,true
+red-bull,2013,Red Bull,RB9,renault,Renault,Renault,4.909,2.301,2.241,0.367,true,1,1.137,19,38,13,11,24,3,14,4,1,true
+sauber,2013,Sauber,C32,ferrari,Ferrari,Ferrari,-0.524,0.450,-0.905,-0.069,true,7,0.767,19,37,0,0,0,1,2,3,7,false
+toro-rosso,2013,Toro Rosso,STR8,ferrari,Ferrari,Ferrari,-1.250,0.450,-1.596,-0.104,true,8,1.137,19,38,0,0,0,3,2,3,8,false
+williams,2013,Williams,FW35,renault,Renault,Renault,-1.763,2.301,-3.650,-0.414,true,10,0.947,19,38,0,0,0,2,14,4,9,false
+caterham,2014,Caterham,CT05,renault,Renault,Renault,-4.355,0.722,-4.661,-0.416,true,10,1.794,19,33,0,0,0,10,3,4,11,false
+ferrari,2014,Ferrari,F14 T,ferrari,Ferrari,Ferrari,0.854,-0.429,1.011,0.272,true,3,0.634,19,38,0,0,2,2,0,3,4,false
+force-india,2014,Force India,VJM07,mercedes,Mercedes,Mercedes,0.220,3.187,-3.023,0.056,true,7,0.515,19,37,0,0,1,1,16,4,6,false
+lotus-f1,2014,Lotus,E22,renault,Renault,Renault,-1.758,0.722,-2.690,0.210,true,4,1.675,19,37,0,0,0,10,3,4,8,false
+marussia,2014,Marussia,MR03,ferrari,Ferrari,Ferrari,-3.967,-0.429,-3.063,-0.475,true,11,0.715,19,31,0,0,0,2,0,3,9,false
+mclaren,2014,McLaren,MP4-29,mercedes,Mercedes,Mercedes,0.923,3.187,-2.669,0.405,true,1,0.634,19,38,0,0,2,2,16,4,5,false
+mercedes,2014,Mercedes,F1 W05,mercedes,Mercedes,Mercedes,5.878,3.187,2.619,0.072,true,6,0.887,19,38,16,18,31,4,16,4,1,true
+red-bull,2014,Red Bull,RB10,renault,Renault,Renault,2.563,0.722,1.526,0.315,true,2,1.014,19,38,3,0,12,5,3,4,2,true
+sauber,2014,Sauber,C33,ferrari,Ferrari,Ferrari,-2.142,-0.429,-1.357,-0.356,true,9,1.141,19,38,0,0,0,6,0,3,10,false
+toro-rosso,2014,Toro Rosso,STR9,renault,Renault,Renault,-0.396,0.722,-0.886,-0.232,true,8,1.521,19,38,0,0,0,9,3,4,7,false
+williams,2014,Williams,FW36,mercedes,Mercedes,Mercedes,2.182,3.187,-1.153,0.148,true,5,0.507,19,38,0,1,9,1,16,4,3,false
+ferrari,2015,Ferrari,SF15-T,ferrari,Ferrari,Ferrari,2.778,0.522,1.923,0.333,true,1,0.799,19,38,3,1,16,3,3,3,2,true
+force-india,2015,Force India,VJM08 / VJM08B,mercedes,Mercedes,Mercedes,-0.219,2.719,-3.040,0.102,true,4,0.812,19,37,0,0,1,3,16,4,5,false
+lotus-f1,2015,Lotus,E23,mercedes,Mercedes,Mercedes,-0.233,2.719,-3.006,0.054,true,6,1.332,19,38,0,0,1,7,16,4,6,false
+marussia,2015,Marussia,MR03B,ferrari,Ferrari,Ferrari,-4.665,0.522,-4.587,-0.600,true,10,0.699,19,35,0,0,0,2,3,3,10,false
+mclaren,2015,McLaren,MP4-30,honda,Honda,Honda,-2.296,-2.148,-0.162,0.014,true,7,1.788,19,36,0,0,0,10,0,1,9,false
+mercedes,2015,Mercedes,F1 W06,mercedes,Mercedes,Mercedes,5.247,2.719,2.234,0.294,true,2,0.666,19,38,16,18,32,2,16,4,1,true
+red-bull,2015,Red Bull,RB11,renault,Renault,Renault,0.352,-0.770,0.957,0.165,true,3,0.812,19,37,0,0,3,3,0,2,4,false
+sauber,2015,Sauber,C34,ferrari,Ferrari,Ferrari,-1.212,0.522,-1.577,-0.157,true,9,0.677,19,37,0,0,0,2,3,3,8,false
+toro-rosso,2015,Toro Rosso,STR10,renault,Renault,Renault,-1.163,-0.770,-0.300,-0.093,true,8,1.599,19,38,0,0,0,9,0,2,7,false
+williams,2015,Williams,FW37,mercedes,Mercedes,Mercedes,1.409,2.719,-1.386,0.076,true,5,0.812,19,37,0,0,4,3,16,4,3,false
+ferrari,2016,Ferrari,SF16-H,ferrari,Ferrari,Ferrari,3.055,0.712,2.257,0.086,true,6,0.887,21,41,0,0,11,3,0,4,3,false
+force-india,2016,Force India,VJM09,mercedes,Mercedes,Mercedes,0.481,2.539,-2.192,0.134,true,4,0.583,21,42,0,0,2,1,19,4,4,false
+haas,2016,Haas,VF-16,ferrari,Ferrari,Ferrari,-1.192,0.712,-1.629,-0.275,true,9,1.498,21,40,0,0,0,7,0,4,8,false
+manor,2016,Manor,MRT05,mercedes,Mercedes,Mercedes,-3.916,2.539,-5.855,-0.600,true,11,0.875,21,42,0,0,0,3,19,4,11,false
+mclaren,2016,McLaren,MP4-31,honda,Honda,Honda,-1.084,-0.542,-0.654,0.112,true,5,1.458,21,42,0,0,0,7,0,1,6,false
+mercedes,2016,Mercedes,F1 W07,mercedes,Mercedes,Mercedes,5.634,2.539,2.747,0.348,true,2,0.583,21,42,19,20,33,1,19,4,1,true
+red-bull,2016,Red Bull,RB12,renault,Renault,TAG Heuer,2.693,0.174,2.253,0.266,true,3,0.591,21,41,2,1,16,1,2,2,2,true
+renault,2016,Renault,R.S.16,renault,Renault,Renault,-2.171,0.174,-2.399,0.054,true,7,1.034,21,41,0,0,0,4,2,2,9,false
+sauber,2016,Sauber,C35,ferrari,Ferrari,Ferrari,-2.861,0.712,-3.286,-0.287,true,10,1.166,21,42,0,0,0,5,0,4,10,false
+toro-rosso,2016,Toro Rosso,STR11,ferrari,Ferrari,Ferrari,-0.919,0.712,-1.480,-0.151,true,8,1.312,21,42,0,0,0,6,0,4,7,false
+williams,2016,Williams,FW38,mercedes,Mercedes,Mercedes,0.280,2.539,-2.633,0.374,true,1,1.020,21,42,0,0,1,4,19,4,5,false
+ferrari,2017,Ferrari,SF70H,ferrari,Ferrari,Ferrari,4.220,0.787,3.259,0.174,true,3,0.505,20,39,5,5,20,1,5,3,2,true
+force-india,2017,Force India,VJM10,mercedes,Mercedes,Mercedes,-0.032,1.531,-1.551,-0.012,true,7,0.373,20,40,0,0,0,0,12,3,4,false
+haas,2017,Haas,VF-17,ferrari,Ferrari,Ferrari,-1.859,0.787,-2.609,-0.037,true,8,1.118,20,40,0,0,0,6,5,3,8,false
+mclaren,2017,McLaren,MCL32,honda,Honda,Honda,-1.931,-1.465,-0.478,0.012,true,6,1.282,20,38,0,0,0,7,0,1,9,false
+mercedes,2017,Mercedes,F1 W08,mercedes,Mercedes,Mercedes,4.624,1.531,2.586,0.507,true,1,0.497,20,40,12,15,26,1,12,3,1,true
+red-bull,2017,Red Bull,RB13,renault,Renault,TAG Heuer,2.236,0.327,1.737,0.172,true,4,1.615,20,40,3,0,13,10,3,3,3,true
+renault,2017,Renault,R.S.17,renault,Renault,Renault,-1.254,0.327,-1.049,-0.532,true,10,1.641,20,39,0,0,0,10,3,3,6,false
+sauber,2017,Sauber,C36,ferrari,Ferrari,Ferrari,-3.385,0.787,-3.665,-0.507,true,9,0.870,20,40,0,0,0,4,5,3,10,false
+toro-rosso,2017,Toro Rosso,STR12,renault,Renault,Toro Rosso,-1.484,0.327,-1.833,0.022,true,5,1.242,20,40,0,0,0,7,3,3,7,false
+williams,2017,Williams,FW40,mercedes,Mercedes,Mercedes,-1.137,1.531,-2.870,0.202,true,2,0.870,20,40,0,0,1,4,12,3,5,false
+ferrari,2018,Ferrari,SF71H,ferrari,Ferrari,Ferrari,4.021,1.105,2.753,0.163,true,3,0.822,21,42,6,6,24,3,6,3,2,true
+force-india,2018,Force India,VJM11,mercedes,Mercedes,Mercedes,-0.535,1.210,-1.370,-0.375,true,9,0.959,21,42,0,0,1,4,11,3,7,false
+haas,2018,Haas,VF-18,ferrari,Ferrari,Ferrari,-0.706,1.105,-1.546,-0.265,true,8,0.685,21,42,0,0,0,2,6,3,5,false
+mclaren,2018,McLaren,MCL33,renault,Renault,Renault,-2.136,0.405,-2.536,-0.005,true,5,1.233,21,42,0,0,0,6,4,3,6,false
+mercedes,2018,Mercedes,F1 W09,mercedes,Mercedes,Mercedes,4.166,1.210,2.460,0.496,true,1,0.685,21,42,11,13,25,2,11,3,1,true
+red-bull,2018,Red Bull,RB14,renault,Renault,TAG Heuer,1.923,0.405,1.023,0.495,true,2,1.507,21,42,4,2,13,8,4,3,3,true
+renault,2018,Renault,R.S.18,renault,Renault,Renault,-0.708,0.405,-0.737,-0.376,true,10,0.959,21,42,0,0,0,4,4,3,4,false
+sauber,2018,Sauber,C37,ferrari,Ferrari,Ferrari,-1.918,1.105,-2.963,-0.060,true,6,1.096,21,42,0,0,0,5,6,3,8,false
+toro-rosso,2018,Toro Rosso,STR13,honda,Honda,Honda,-1.322,-0.661,-0.736,0.075,true,4,1.233,21,42,0,0,0,6,0,1,9,false
+williams,2018,Williams,FW41,mercedes,Mercedes,Mercedes,-2.785,1.210,-3.848,-0.147,true,7,0.822,21,42,0,0,0,3,11,3,10,false
+alfa-romeo,2019,Alfa Romeo,C38,ferrari,Ferrari,Ferrari,-1.315,1.583,-2.467,-0.431,true,10,0.769,21,42,0,0,0,1,3,3,8,false
+ferrari,2019,Ferrari,SF90,ferrari,Ferrari,Ferrari,3.064,1.583,1.287,0.194,true,4,1.154,21,42,3,9,19,3,3,3,2,true
+haas,2019,Haas,VF-19,ferrari,Ferrari,Ferrari,-1.598,1.583,-2.759,-0.422,true,9,1.346,21,42,0,0,0,4,3,3,9,false
+mclaren,2019,McLaren,MCL34,renault,Renault,Renault,-0.381,-0.410,-0.250,0.279,true,3,1.538,21,42,0,0,1,5,0,2,4,false
+mercedes,2019,Mercedes,F1 W10,mercedes,Mercedes,Mercedes,4.504,1.193,3.004,0.307,true,2,0.769,21,42,15,10,32,1,15,3,1,true
+racing-point,2019,Racing Point,RP19,mercedes,Mercedes,BWT Mercedes,-0.924,1.193,-1.844,-0.273,true,8,0.962,21,42,0,0,0,2,15,3,7,false
+red-bull,2019,Red Bull,RB15,honda,Honda,Honda,1.725,0.430,0.812,0.483,true,1,0.769,21,42,3,2,9,1,3,2,3,true
+renault,2019,Renault,R.S.19,renault,Renault,Renault,-0.851,-0.410,-0.313,-0.128,true,7,0.962,21,42,0,0,0,2,0,2,5,false
+toro-rosso,2019,Toro Rosso,STR14,honda,Honda,Honda,-0.436,0.430,-0.891,0.025,true,5,0.769,21,42,0,0,2,1,3,2,6,false
+williams,2019,Williams,FW42,mercedes,Mercedes,Mercedes,-3.788,1.193,-4.948,-0.033,true,6,0.962,21,42,0,0,0,2,15,3,10,false
+alfa-romeo,2020,Alfa Romeo,C39,ferrari,Ferrari,Ferrari,-2.213,-0.868,-1.316,-0.029,true,7,0.890,17,34,0,0,0,2,0,3,8,false
+alphatauri,2020,AlphaTauri,AT01,honda,Honda,Honda,0.119,0.602,-0.577,0.094,true,3,1.068,17,34,1,0,1,3,3,2,7,true
+ferrari,2020,Ferrari,SF1000,ferrari,Ferrari,Ferrari,-0.390,-0.868,0.513,-0.035,true,8,0.890,17,34,0,0,3,2,0,3,6,false
+haas,2020,Haas,VF-20,ferrari,Ferrari,Ferrari,-3.053,-0.868,-1.585,-0.600,true,10,1.247,17,34,0,0,0,4,0,3,9,false
+mclaren,2020,McLaren,MCL35,renault,Renault,Renault,0.394,0.321,0.055,0.018,true,5,0.722,17,33,0,0,2,1,0,2,3,false
+mercedes,2020,Mercedes,F1 W11,mercedes,Mercedes,Mercedes,4.375,1.906,2.439,0.030,true,4,0.712,17,34,13,15,25,1,14,3,1,true
+racing-point,2020,Racing Point,RP20,mercedes,Mercedes,BWT Mercedes,1.343,1.906,-0.558,-0.005,true,6,0.903,17,33,1,1,4,2,14,3,4,true
+red-bull,2020,Red Bull,RB16,honda,Honda,Honda,1.686,0.602,0.526,0.558,true,1,1.247,17,34,2,1,13,4,3,2,2,true
+renault,2020,Renault,R.S.20,renault,Renault,Renault,0.569,0.321,0.090,0.158,true,2,1.425,17,34,0,0,3,5,0,2,5,false
+williams,2020,Williams,FW43,mercedes,Mercedes,Mercedes,-2.830,1.906,-4.688,-0.048,true,9,0.890,17,34,0,0,0,2,14,3,10,false
+alfa-romeo,2021,Alfa Romeo,C41,ferrari,Ferrari,Ferrari,-1.618,-0.291,-1.311,-0.016,true,7,0.997,22,44,0,0,0,2,0,3,9,false
+alphatauri,2021,AlphaTauri,AT02,honda,Honda,Honda,0.359,0.964,-0.525,-0.080,true,8,1.409,22,43,0,0,1,4,11,2,6,false
+alpine,2021,Alpine,A521,renault,Renault,Renault,-0.300,-0.150,-0.374,0.224,true,2,1.396,22,44,1,0,2,4,1,1,5,true
+aston-martin,2021,Aston Martin,AMR21,mercedes,Mercedes,Mercedes,-0.600,1.495,-2.196,0.101,true,3,0.997,22,44,0,0,1,2,10,4,7,false
+ferrari,2021,Ferrari,SF21,ferrari,Ferrari,Ferrari,0.744,-0.291,1.033,0.002,true,6,0.604,22,43,0,2,5,0,0,3,3,false
+haas,2021,Haas,VF-21,ferrari,Ferrari,Ferrari,-3.978,-0.291,-3.087,-0.600,true,10,1.208,22,43,0,0,0,3,0,3,10,false
+mclaren,2021,McLaren,MCL35M,mercedes,Mercedes,Mercedes,0.808,1.495,-0.709,0.022,true,5,0.798,22,44,1,1,5,1,10,4,4,true
+mercedes,2021,Mercedes,F1 W12,mercedes,Mercedes,Mercedes,3.677,1.495,2.107,0.075,true,4,0.798,22,44,9,9,28,1,10,4,1,true
+red-bull,2021,Red Bull,RB16B,honda,Honda,Honda,2.534,0.964,1.050,0.520,true,1,0.598,22,44,11,10,23,0,11,2,2,true
+williams,2021,Williams,FW43B,mercedes,Mercedes,Mercedes,-1.627,1.495,-3.011,-0.111,true,9,1.197,22,44,0,0,1,3,10,4,8,false
+alfa-romeo,2022,Alfa Romeo,C42,ferrari,Ferrari,Ferrari,-0.939,0.798,-1.333,-0.404,true,9,1.448,22,44,0,0,0,6,4,3,6,false
+alphatauri,2022,AlphaTauri,AT03,honda,Honda,RBPT,-1.433,0.644,-2.304,0.227,true,2,1.140,22,43,0,0,0,4,17,2,9,false
+alpine,2022,Alpine,A522,renault,Renault,Renault,-0.350,-0.175,-0.156,-0.019,true,7,1.448,22,44,0,0,0,6,0,1,4,false
+aston-martin,2022,Aston Martin,AMR22,mercedes,Mercedes,Mercedes,-1.309,0.363,-1.705,0.033,true,6,0.805,22,44,0,0,0,2,1,4,7,false
+ferrari,2022,Ferrari,F1-75,ferrari,Ferrari,Ferrari,3.333,0.798,2.430,0.105,true,5,1.126,22,44,4,12,20,4,4,3,2,true
+haas,2022,Haas,VF-22,ferrari,Ferrari,Ferrari,-1.571,0.798,-1.769,-0.600,true,10,0.977,22,43,0,1,0,3,4,3,8,false
+mclaren,2022,McLaren,MCL36,mercedes,Mercedes,Mercedes,-0.507,0.363,-1.078,0.208,true,3,0.965,22,44,0,0,1,3,1,4,5,false
+mercedes,2022,Mercedes,F1 W13,mercedes,Mercedes,Mercedes,1.597,0.363,1.106,0.128,true,4,0.483,22,44,1,1,17,0,1,4,3,true
+red-bull,2022,Red Bull,RB18,honda,Honda,RBPT,3.365,0.644,2.249,0.472,true,1,0.805,22,44,17,8,28,2,17,2,1,true
+williams,2022,Williams,FW44,mercedes,Mercedes,Mercedes,-2.186,0.363,-2.409,-0.140,true,8,0.805,22,44,0,0,0,2,1,4,10,false
+alfa-romeo,2023,Alfa Romeo,C43,ferrari,Ferrari,Ferrari,-1.441,0.027,-1.075,-0.393,true,9,1.449,22,44,0,0,0,5,1,3,9,false
+alphatauri,2023,AlphaTauri,AT04,honda,Honda,Honda RBPT,-1.208,0.588,-2.019,0.223,true,4,0.549,22,43,0,0,0,0,21,2,8,false
+alpine,2023,Alpine,A523,renault,Renault,Renault,-0.670,-0.335,-0.367,0.032,true,6,1.086,22,44,0,0,2,3,0,1,6,false
+aston-martin,2023,Aston Martin,AMR23,mercedes,Mercedes,Mercedes,0.616,0.543,0.203,-0.130,true,7,1.098,22,43,0,0,8,3,0,4,5,false
+ferrari,2023,Ferrari,SF-23,ferrari,Ferrari,Ferrari,1.522,0.027,1.214,0.281,true,2,0.925,22,42,1,7,9,2,1,3,3,true
+haas,2023,Haas,VF-23,ferrari,Ferrari,Ferrari,-2.058,0.027,-1.515,-0.570,true,10,1.086,22,44,0,0,0,3,1,3,10,false
+mclaren,2023,McLaren,MCL60,mercedes,Mercedes,Mercedes,0.299,0.543,-0.472,0.228,true,3,0.724,22,44,0,0,9,1,0,4,4,false
+mercedes,2023,Mercedes,F1 W14,mercedes,Mercedes,Mercedes,1.014,0.543,0.357,0.114,true,5,1.086,22,44,0,1,8,3,0,4,2,false
+red-bull,2023,Red Bull,RB19,honda,Honda,Honda RBPT,2.972,0.588,1.971,0.413,true,1,0.543,22,44,21,14,30,0,21,2,1,true
+williams,2023,Williams,FW45,mercedes,Mercedes,Mercedes,-1.046,0.543,-1.391,-0.198,true,8,1.449,22,44,0,0,0,5,0,4,7,false
+alpine,2024,Alpine,A524,renault,Renault,Renault,-1.484,-0.742,-0.543,-0.199,true,7,1.310,24,47,0,0,2,3,0,1,6,false
+aston-martin,2024,Aston Martin,AMR24,mercedes,Mercedes,Mercedes,-0.828,1.439,-2.225,-0.042,true,6,0.873,24,47,0,0,0,1,10,4,5,false
+ferrari,2024,Ferrari,SF-24,ferrari,Ferrari,Ferrari,2.122,0.306,1.542,0.274,true,3,0.867,24,48,5,4,22,1,5,3,2,true
+haas,2024,Haas,VF-24,ferrari,Ferrari,Ferrari,-1.204,0.306,-1.166,-0.344,true,9,0.650,24,48,0,0,0,0,5,3,7,false
+kick-sauber,2024,Kick Sauber,C44,ferrari,Ferrari,Ferrari,-2.318,0.306,-2.153,-0.471,true,10,1.301,24,48,0,0,0,3,5,3,10,false
+mclaren,2024,McLaren,MCL38,mercedes,Mercedes,Mercedes,2.703,1.439,0.863,0.401,true,1,0.650,24,48,6,8,21,0,10,4,1,true
+mercedes,2024,Mercedes,F1 W15,mercedes,Mercedes,Mercedes,1.613,1.439,0.030,0.144,true,5,1.084,24,48,4,4,9,2,10,4,4,true
+rb,2024,RB,VCARB 01,honda,Honda,Honda RBPT,-0.593,0.300,-1.049,0.156,true,4,0.867,24,48,0,0,0,1,9,2,8,false
+red-bull,2024,Red Bull,RB20,honda,Honda,Honda RBPT,1.494,0.300,0.811,0.383,true,2,1.084,24,48,9,8,18,2,9,2,3,true
+williams,2024,Williams,FW46,mercedes,Mercedes,Mercedes,-1.506,1.439,-2.643,-0.302,true,8,1.320,24,46,0,0,0,3,10,4,9,false
+alpine,2025,Alpine,A525,renault,Renault,Renault,-2.240,-1.120,-0.825,-0.295,true,9,0.669,24,47,0,0,0,0,0,1,10,false
+aston-martin,2025,Aston Martin,AMR25,mercedes,Mercedes,Mercedes,-1.239,1.935,-2.925,-0.249,true,8,1.562,24,47,0,0,0,4,16,4,7,false
+ferrari,2025,Ferrari,SF-25,ferrari,Ferrari,Ferrari,0.904,-0.139,0.537,0.506,true,1,0.665,24,48,0,1,7,0,0,3,4,false
+haas,2025,Haas,VF-25,ferrari,Ferrari,Ferrari,-1.322,-0.139,-0.585,-0.598,true,10,1.551,24,48,0,0,0,4,0,3,8,false
+kick-sauber,2025,Kick Sauber,C45,ferrari,Ferrari,Ferrari,-1.518,-0.139,-1.462,0.083,true,4,1.116,24,47,0,0,1,2,0,3,9,false
+mclaren,2025,McLaren,MCL39,mercedes,Mercedes,Mercedes,3.871,1.935,1.853,0.083,true,5,0.665,24,48,14,13,34,0,16,4,1,true
+mercedes,2025,Mercedes,F1 W16,mercedes,Mercedes,Mercedes,1.934,1.935,-0.274,0.273,true,2,1.108,24,48,2,2,12,2,16,4,2,true
+racing-bulls,2025,Racing Bulls,VCARB 02,honda,Honda,Honda RBPT,-0.355,0.097,-0.668,0.216,true,3,0.886,24,48,0,0,1,1,8,2,6,false
+red-bull,2025,Red Bull,RB21,honda,Honda,Honda RBPT,0.647,0.097,0.595,-0.045,true,7,0.665,24,48,8,8,15,0,8,2,3,true
+williams,2025,Williams,FW47,mercedes,Mercedes,Mercedes,-0.682,1.935,-2.645,0.028,true,6,1.116,24,47,0,0,2,2,16,4,5,false

@@ -75,3 +75,53 @@ class SimConfig(BaseModel):
 
 
 DEFAULT_SIM = SimConfig()
+
+
+class SweepDraftConfig(BaseModel):
+    """Rules of the Clean Sweep draft: seven rounds (four parts, three drivers)."""
+
+    model_config = ConfigDict(frozen=True)
+
+    rerolls: int = 2
+    """Rerolls available for the whole draft."""
+
+
+DEFAULT_SWEEP_DRAFT = SweepDraftConfig()
+
+
+class SweepSimConfig(BaseModel):
+    """Constants of the Clean Sweep season, measured against real results from 1980 to 2025.
+
+    A car's chance of retiring in a race is ``mechanical_rate`` times its reliability ratio
+    plus ``incident_rate`` times its driver's incident ratio (both 1.0 for an average car or
+    driver), capped at ``retirement_cap``.
+    """
+
+    model_config = ConfigDict(frozen=True)
+
+    races: int = 20
+    mechanical_rate: float = 0.06
+    incident_rate: float = 0.04
+    absence_rate: float = 0.03
+    """Chance, per race and per main driver, that the reserve drives instead."""
+    retirement_cap: float = 0.9
+
+
+DEFAULT_SWEEP_SIM = SweepSimConfig()
+
+
+class SweepDisplayConfig(BaseModel):
+    """How strengths are shown as 1 to 99 ratings: ``base + scale * value``, clamped."""
+
+    model_config = ConfigDict(frozen=True)
+
+    base: float = 60.0
+    engine_scale: float = 12.0
+    chassis_scale: float = 7.5
+    pit_scale: float = 65.0
+    reliability_scale: float = 55.0
+    """Applied to ``1 - reliability``, so a more reliable car rates higher."""
+    driver_scale: float = 12.5
+
+
+DEFAULT_SWEEP_DISPLAY = SweepDisplayConfig()

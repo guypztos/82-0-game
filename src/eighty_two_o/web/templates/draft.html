@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% from "_players.html" import stat_headers, stat_cells, card_line %}
+{% block title %}Pick {{ pick_number + 1 }} of {{ rounds }} · 82-0{% endblock %}
+{% block content %}
+<section class="board">
+  <p class="eyebrow">Pick <span class="led">{{ pick_number + 1 }}</span> of {{ rounds }}</p>
+  <h1 class="team-header">
+    <span class="team-season">{{ team.season_label }}</span>
+    <span class="team-name">{{ team.name }}</span>
+  </h1>
+  {% if game.stats_visible %}
+    <p class="muted">Real record: {{ team.record }}</p>
+  {% endif %}
+  <form method="post" action="/games/{{ game.id }}/reroll" class="reroll">
+    <input type="hidden" name="pick_number" value="{{ pick_number }}">
+    <button type="submit" class="secondary" {% if rerolls_left == 0 %}disabled{% endif %}>
+      Reroll team ({{ rerolls_left }} left)
+    </button>
+  </form>
+</section>
+
+<div class="draft-layout">
+  <section class="table-wrap" aria-label="Roster">
+    <table class="roster">
+      <thead>
+        <tr>
+          <th>Player</th>
+          <th>Pos</th>
+          {% if game.stats_visible %}{{ stat_headers() }}{% endif %}
+          <th><span class="visually-hidden">Draft</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for entry in entries %}
+          {% set p = entry.card %}
+          <tr class="{{ '' if entry.available else 'unavailable' }}">
+            <td class="name">{{ p.name }}</td>
+            <td>{{ p.position.name }}</td>
+            {% if game.stats_visible %}{{ stat_cells(p) }}{% endif %}
+            <td class="action">
+              {% if entry.available %}
+                <form method="post" action="/games/{{ game.id }}/pick">
+                  <input type="hidden" name="card_id" value="{{ p.card_id }}">
+                  <input type="hidden" name="pick_number" value="{{ pick_number }}">
+                  <button type="submit">Draft</button>
+                </form>
+              {% else %}
+                <span class="tag">Already yours</span>
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </section>
+
+  <aside class="picks" aria-label="Your picks">
+    <h2>Your team</h2>
+    <ol class="pick-list">
+      {% for p in game.draft.picks %}
+        <li>
+          {{ card_line(p) }}
+          {% if game.stats_visible %}
+            <span class="card-stat">{{ p.points | one }} PPG</span>
+          {% endif %}
+        </li>
+      {% endfor %}
+      {% for _ in range(rounds - game.draft.picks | length) %}
+        <li class="empty">Open slot</li>
+      {% endfor %}
+    </ol>
+  </aside>
+</div>
+{% endblock %}

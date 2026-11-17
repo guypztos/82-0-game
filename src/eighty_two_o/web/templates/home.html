@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <h1 class="headline">Can your team go <span class="led">82-0</span>?</h1>
+  <p class="lede">
+    Eight rounds. Each round rolls a random real NBA team from any season since 1979-80,
+    and you draft one player from that roster: that season's version of him. Pick five
+    starters and three bench players, then watch your team play 82 games against real
+    teams from history.
+  </p>
+  <p class="lede">You get two rerolls for the whole draft. Spend them wisely.</p>
+</section>
+
+<form method="post" action="/games" class="mode-picker">
+  <button type="submit" name="mode" value="rookie" class="mode-card">
+    <span class="mode-title">Rookie</span>
+    <span class="mode-text">See every player's stat line while you draft.</span>
+  </button>
+  <button type="submit" name="mode" value="legend" class="mode-card">
+    <span class="mode-title">Legend</span>
+    <span class="mode-text">Names and positions only. Stats are revealed after the draft.</span>
+  </button>
+  <details class="seed">
+    <summary>Use a specific seed</summary>
+    <label>Seed <input type="text" name="seed" inputmode="numeric" placeholder="random"></label>
+    <p class="muted">The same seed with the same picks always plays the same season.</p>
+  </details>
+</form>
+{% endblock %}

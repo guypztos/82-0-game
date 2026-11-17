@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}82-0{% endblock %}</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="/"><span class="led">82-0</span></a>
+    {% if game is defined and game %}
+      <span class="mode-badge">{{ game.mode.value | capitalize }} mode</span>
+    {% endif %}
+  </header>
+  <main>
+    {% if error %}
+      <p class="banner" role="alert">{{ error }}</p>
+    {% endif %}
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="site-footer">{{ credit }}</footer>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

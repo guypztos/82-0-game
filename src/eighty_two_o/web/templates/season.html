@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% from "_players.html" import stat_headers, stat_cells %}
+{% block title %}{{ season.record }} · 82-0{% endblock %}
+{% block content %}
+<section class="scoreboard" aria-label="Season record">
+  <div class="score">
+    <span class="score-label">W</span>
+    <span class="led huge" data-wins>{{ season.wins }}</span>
+  </div>
+  <div class="score">
+    <span class="score-label">L</span>
+    <span class="led huge loss" data-losses>{{ season.losses }}</span>
+  </div>
+  <div class="score streak">
+    <span class="score-label" data-streak-label>Longest win streak</span>
+    <span class="led big" data-streak data-longest="{{ season.longest_win_streak }}">
+      {{- season.longest_win_streak -}}
+    </span>
+  </div>
+  <p class="game-counter" data-counter hidden></p>
+  <button type="button" class="secondary" data-skip hidden>Skip to end</button>
+</section>
+
+<section class="table-wrap" aria-label="Your team">
+  <table class="roster">
+    <thead>
+      <tr><th>Player</th><th>Pos</th><th>Season</th><th>Role</th>{{ stat_headers() }}</tr>
+    </thead>
+    <tbody>
+      {% for group, role in [(game.starters, "Starter"), (game.bench, "Bench")] %}
+        {% for p in group %}
+          <tr>
+            <td class="name">{{ p.name }}</td>
+            <td>{{ p.position.name }}</td>
+            <td>{{ p.season_label }} {{ p.team }}</td>
+            <td>{{ role }}</td>
+            {{ stat_cells(p) }}
+          </tr>
+        {% endfor %}
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+
+<section aria-label="Results">
+  <h2>The season</h2>
+  <ol class="results" data-reveal>
+    {% for g in season.games %}
+      {% set first = season.first_loss is not none and season.first_loss.number == g.number %}
+      <li class="result {{ 'win' if g.won else 'loss' }}{{ ' first-loss' if first else '' }}"
+          data-game data-won="{{ 1 if g.won else 0 }}">
+        <span class="result-number">{{ g.number }}</span>
+        <span class="result-where">{{ 'vs' if g.home else '@' }}</span>
+        <span class="result-opponent">
+          {{ g.opponent.label }} <span class="muted">({{ g.opponent.record }})</span>
+          {% if first %}<span class="tag loss">First loss</span>{% endif %}
+        </span>
+        <span class="result-outcome">{{ 'W' if g.won else 'L' }}</span>
+        <span class="result-score led">{{ g.team_points }}-{{ g.opponent_points }}</span>
+      </li>
+    {% endfor %}
+  </ol>
+</section>
+
+<section class="summary" data-summary aria-label="Summary">
+  <p class="verdict {{ 'perfect' if season.perfect else '' }}">{{ verdict }}</p>
+  <p class="final-record">Final record <span class="led">{{ season.record }}</span></p>
+
+  <dl class="facts">
+    {% if season.first_loss %}
+      <dt>First loss</dt>
+      <dd>Game {{ season.first_loss.number }}, {{ season.first_loss.team_points }}-{{ season.first_loss.opponent_points }}
+        to the {{ season.first_loss.opponent.label }}</dd>
+    {% endif %}
+    {% if season.biggest_win %}
+      <dt>Biggest win</dt>
+      <dd>{{ season.biggest_win.team_points }}-{{ season.biggest_win.opponent_points }}
+        over the {{ season.biggest_win.opponent.label }}</dd>
+    {% endif %}
+    {% if season.worst_loss %}
+      <dt>Worst loss</dt>
+      <dd>{{ season.worst_loss.team_points }}-{{ season.worst_loss.opponent_points }}
+        to the {{ season.worst_loss.opponent.label }}</dd>
+    {% endif %}
+  </dl>
+
+  {% if season.losses_to %}
+    <h3>Teams that beat you</h3>
+    <ul class="beat-you">
+      {% for team in season.losses_to %}<li>{{ team.label }}</li>{% endfor %}
+    </ul>
+  {% endif %}
+
+  <h3>Why your team rated <span class="led">{{ rating.net | signed }}</span></h3>
+  <p class="muted">Points per 100 possessions better than an average NBA team.</p>
+  <table class="breakdown">
+    <tbody>
+      {% for label, value in breakdown %}
+        <tr><th scope="row">{{ label }}</th><td class="num">{{ value | signed }}</td></tr>
+      {% endfor %}
+    </tbody>
+    <tfoot>
+      <tr><th scope="row">Overall</th><td class="num">{{ rating.net | signed }}</td></tr>
+    </tfoot>
+  </table>
+
+  <p class="muted">Seed {{ game.seed }}</p>
+  <form method="post" action="/games">
+    <input type="hidden" name="mode" value="{{ game.mode.value }}">
+    <button type="submit" class="primary">Play again</button>
+  </form>
+</section>
+{% endblock %}
+{% block scripts %}<script src="/static/reveal.js" defer></script>{% endblock %}

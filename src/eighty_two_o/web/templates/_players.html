@@ -1,0 +1,29 @@
+{# Stat columns for a player table. Only rendered when stats may be shown. #}
+{% macro stat_headers() %}
+  <th class="num" title="Age">Age</th>
+  <th class="num" title="Games">G</th>
+  <th class="num" title="Minutes per game">MPG</th>
+  <th class="num" title="Points per game">PPG</th>
+  <th class="num" title="Rebounds per game">RPG</th>
+  <th class="num" title="Assists per game">APG</th>
+  <th class="num" title="Steals per game">SPG</th>
+  <th class="num" title="Blocks per game">BPG</th>
+  <th class="num" title="True shooting percentage">TS%</th>
+{% endmacro %}
+
+{% macro stat_cells(p) %}
+  <td class="num">{{ p.age }}</td>
+  <td class="num">{{ p.games }}</td>
+  <td class="num">{{ p.minutes | one }}</td>
+  <td class="num">{{ p.points | one }}</td>
+  <td class="num">{{ p.rebounds | one }}</td>
+  <td class="num">{{ p.assists | one }}</td>
+  <td class="num">{{ p.steals | one }}</td>
+  <td class="num">{{ p.blocks | one }}</td>
+  <td class="num">{{ p.true_shooting | pct }}</td>
+{% endmacro %}
+
+{% macro card_line(p) %}
+  <span class="card-name">{{ p.name }}</span>
+  <span class="card-meta">{{ p.position.name }} · {{ p.season_label }} {{ p.team }}</span>
+{% endmacro %}

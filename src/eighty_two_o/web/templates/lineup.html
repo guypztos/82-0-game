@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% from "_players.html" import stat_headers, stat_cells %}
+{% block title %}Set your lineup · 82-0{% endblock %}
+{% block content %}
+<section class="board">
+  <p class="eyebrow">Draft complete</p>
+  <h1 class="team-header"><span class="team-name">Set your lineup</span></h1>
+  <p class="muted">
+    Check five starters (34 minutes each). The other three come off the bench. Balance
+    matters: the simulation punishes too many scorers, no playmaking, no rebounding and
+    starters out of position.
+  </p>
+</section>
+
+<form method="post" action="/games/{{ game.id }}/lineup">
+  <div class="table-wrap">
+    <table class="roster">
+      <thead>
+        <tr>
+          <th>Start</th>
+          <th>Player</th>
+          <th>Pos</th>
+          <th>Season</th>
+          {% if game.stats_visible %}{{ stat_headers() }}{% endif %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for p in game.draft.picks %}
+          <tr>
+            <td>
+              <input type="checkbox" name="starters" value="{{ p.card_id }}"
+                     id="start-{{ loop.index }}" {% if loop.index <= 5 %}checked{% endif %}>
+            </td>
+            <td class="name"><label for="start-{{ loop.index }}">{{ p.name }}</label></td>
+            <td>{{ p.position.name }}</td>
+            <td>{{ p.season_label }} {{ p.team }}</td>
+            {% if game.stats_visible %}{{ stat_cells(p) }}{% endif %}
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <button type="submit" class="primary">Start the season</button>
+</form>
+{% endblock %}

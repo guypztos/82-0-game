@@ -6,11 +6,8 @@ season has been simulated).
 """
 
 import secrets
-import threading
-from collections import OrderedDict
 from collections.abc import Sequence
 from enum import StrEnum
-from typing import Protocol
 
 from pydantic import BaseModel, ConfigDict
 
@@ -27,6 +24,7 @@ from eighty_two_o.data.repository import Dataset
 from eighty_two_o.draft import DraftState, pick, reroll, start_draft
 from eighty_two_o.rating import STARTERS, TeamRating, rate_team
 from eighty_two_o.season import SeasonResult, simulate_season
+from eighty_two_o.store import InMemoryStore, Store
 
 
 class Mode(StrEnum):
@@ -197,45 +195,9 @@ def _require_phase(game: Game, phase: Phase) -> None:
         raise GameError(messages[phase])
 
 
-class GameStore(Protocol):
-    """Somewhere to keep games between requests."""
-
-    def get(self, game_id: str) -> Game | None:
-        """Return the game with this id, or ``None`` if there is none."""
-        ...
-
-    def save(self, game: Game) -> None:
-        """Store a game, replacing any earlier version with the same id."""
-        ...
+type GameStore = Store[Game]
+"""Somewhere to keep basketball games between requests."""
 
 
-class InMemoryGameStore:
-    """Keeps the most recently saved games in memory; the oldest are dropped beyond a limit."""
-
-    def __init__(self, max_games: int = 1000) -> None:
-        """Create an empty store.
-
-        Args:
-            max_games: How many games to keep.
-        """
-        self._max_games = max_games
-        self._games: OrderedDict[str, Game] = OrderedDict()
-        self._lock = threading.Lock()
-
-    def get(self, game_id: str) -> Game | None:
-        """Return the game with this id, or ``None`` if there is none (or it was dropped)."""
-        with self._lock:
-            return self._games.get(game_id)
-
-    def save(self, game: Game) -> None:
-        """Store a game as the most recent one, dropping the oldest beyond the limit."""
-        with self._lock:
-            self._games[game.id] = game
-            self._games.move_to_end(game.id)
-            while len(self._games) > self._max_games:
-                self._games.popitem(last=False)
-
-    def __len__(self) -> int:
-        """Return the number of games kept."""
-        with self._lock:
-            return len(self._games)
+class InMemoryGameStore(InMemoryStore[Game]):
+    """Keeps the most recently saved basketball games in memory."""

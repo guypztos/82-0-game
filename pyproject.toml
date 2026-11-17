@@ -1,7 +1,7 @@
 [project]
 name = "eighty-two-o"
 version = "0.1.0"
-description = "Draft an NBA lineup and simulate a season to see if it goes 82-0."
+description = "Draft from history: an NBA lineup that goes 82-0, or a car that wins every race."
 readme = "README.md"
 authors = [
     { name = "guypztos", email = "246836003+guypztos@users.noreply.github.com" }

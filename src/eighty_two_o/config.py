@@ -51,3 +51,27 @@ class RatingConfig(BaseModel):
 
 
 DEFAULT_RATING = RatingConfig()
+
+
+class SimConfig(BaseModel):
+    """Constants of the season simulation.
+
+    With ``sigma = 10`` a +10 team (the real 73-9 Warriors) wins about 81% of its games, and a
+    team needs about +21 to go 82-0 once in 30 seasons.
+    """
+
+    model_config = ConfigDict(frozen=True)
+
+    games: int = 82
+    sigma: float = 10.0
+    """Standard deviation of a game's margin around its expected value, in points."""
+    home_edge: float = 2.5
+    total_points_mean: float = 212.0
+    total_points_sd: float = 16.0
+    total_points_min: int = 160
+    total_points_max: int = 270
+    loser_points_min: int = 70
+    """Floor on the losing score so huge blowouts still look like basketball scores."""
+
+
+DEFAULT_SIM = SimConfig()

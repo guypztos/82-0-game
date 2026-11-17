@@ -1,4 +1,4 @@
-// Reveal the season one game at a time, like a scoreboard ticking through 82 games.
+// Reveal the season one game (or race) at a time, like a scoreboard ticking through it.
 // Without JavaScript the server-rendered page simply shows every result and the summary.
 (() => {
   "use strict";
@@ -8,6 +8,7 @@
   if (!list) return;
 
   const rows = Array.from(list.querySelectorAll("[data-game]"));
+  const unit = list.dataset.unit || "Game";
   const summary = document.querySelector("[data-summary]");
   const winsEl = document.querySelector("[data-wins]");
   const lossesEl = document.querySelector("[data-losses]");
@@ -26,7 +27,7 @@
     winsEl.textContent = String(wins);
     lossesEl.textContent = String(losses);
     streakEl.textContent = String(streak);
-    counter.textContent = `Game ${shown} of ${rows.length}`;
+    counter.textContent = `${unit} ${shown} of ${rows.length}`;
   };
 
   const revealNext = (animate) => {

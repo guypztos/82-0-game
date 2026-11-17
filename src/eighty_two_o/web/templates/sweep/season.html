@@ -1,0 +1,126 @@
+{% extends "sweep/_layout.html" %}
+{% from "sweep/_items.html" import part_cells, driver_cells with context %}
+{% block title %}{{ season.record }} · Clean Sweep{% endblock %}
+{% block content %}
+<section class="scoreboard" aria-label="Season record">
+  <div class="score">
+    <span class="score-label">W</span>
+    <span class="led huge" data-wins>{{ season.wins }}</span>
+  </div>
+  <div class="score">
+    <span class="score-label">L</span>
+    <span class="led huge loss" data-losses>{{ season.losses }}</span>
+  </div>
+  <div class="score streak">
+    <span class="score-label" data-streak-label>Longest win streak</span>
+    <span class="led big" data-streak data-longest="{{ season.longest_win_streak }}">
+      {{- season.longest_win_streak -}}
+    </span>
+  </div>
+  <p class="game-counter" data-counter hidden></p>
+  <button type="button" class="secondary" data-skip hidden>Skip to end</button>
+</section>
+
+<section aria-label="Results">
+  <h2>The season</h2>
+  <ol class="results" data-reveal data-unit="Race">
+    {% for race in season.races %}
+      {% set first = season.first_loss is not none and season.first_loss.number == race.number %}
+      <li class="result race {{ 'win' if race.won else 'loss' }}{{ ' first-loss' if first else '' }}"
+          data-game data-won="{{ 1 if race.won else 0 }}">
+        <span class="result-number">{{ race.number }}</span>
+        <span class="result-field">vs the {{ race.year }} field</span>
+        <span class="result-detail">
+          {{ car_result_line(race.cars[0]) }} · {{ car_result_line(race.cars[1]) }}
+          {% if not race.won %}
+            <br>{% if race.winner %}Won by {{ race.winner }}, {{ race.winner_car }}{% else %}Nobody finished{% endif %}
+          {% endif %}
+          {% if first %}<span class="tag loss">First defeat</span>{% endif %}
+        </span>
+        <span class="result-outcome">{{ 'W' if race.won else 'L' }}</span>
+      </li>
+    {% endfor %}
+  </ol>
+</section>
+
+<section class="summary" data-summary aria-label="Summary">
+  <p class="verdict {{ 'perfect' if season.perfect else '' }}">{{ verdict }}</p>
+  <p class="final-record">Races won <span class="led">{{ season.record }}</span></p>
+
+  <dl class="facts">
+    {% if season.first_loss %}
+      <dt>First defeat</dt>
+      <dd>Race {{ season.first_loss.number }}, against the {{ season.first_loss.year }} field
+        {%- if season.first_loss.winner %}: won by {{ season.first_loss.winner }}, {{ season.first_loss.winner_car }}{% endif %}</dd>
+    {% endif %}
+    <dt>One-two finishes</dt>
+    <dd>{{ season.one_twos }}</dd>
+    <dt>Retirements</dt>
+    <dd>{{ season.retirements }}</dd>
+  </dl>
+
+  {% if beaten_by %}
+    <h3>Who beat you</h3>
+    <ul class="beat-you">
+      {% for who, races in beaten_by %}
+        <li>{{ who }}{% if races > 1 %} ({{ races }} races){% endif %}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <h3>Your team</h3>
+  <div class="table-wrap">
+    <table class="roster team">
+      <thead><tr><th>Slot</th><th>From</th><th class="num">Rating</th><th class="num">Value</th></tr></thead>
+      <tbody>
+        {% for slot in part_slots %}
+          {% set car = team.part(slot) %}
+          <tr>
+            {{ part_cells(slot, car, true) }}
+            <td class="num">
+              {%- if slot.value == "reliability" %}{{ "%.2f" | format(car.reliability) }}x
+              {%- else %}{{ part_value(slot, car) | signed2 }}{% endif -%}
+            </td>
+          </tr>
+        {% endfor %}
+        {% for d, role in [(team.mains[0], "Driver"), (team.mains[1], "Driver"), (team.reserve, "Reserve")] %}
+          <tr>
+            <th scope="row">{{ role }}</th>
+            {{ driver_cells(d, true) }}
+            <td class="num">{{ d.rating | signed2 }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <p class="muted">
+    Reliability is a ratio to the average car of its own era: below 1.00x breaks down less.
+  </p>
+
+  <h3>Why your car rated <span class="led">{{ strength | signed2 }}</span></h3>
+  <table class="breakdown">
+    <tbody>
+      {% for label, value in breakdown %}
+        <tr><th scope="row">{{ label }}</th><td class="num">{{ value | signed2 }}</td></tr>
+      {% endfor %}
+    </tbody>
+    <tfoot>
+      <tr><th scope="row">Car</th><td class="num">{{ strength | signed2 }}</td></tr>
+    </tfoot>
+  </table>
+  <p class="muted">
+    For scale: the strongest real car, the {{ strongest.label }}, is {{ strongest.car | signed2 }}.
+    An average car of its season is +0.00. Each driver's rating adds to the car's.
+  </p>
+  <p class="muted">
+    Chance of a mechanical failure, per car and per race: {{ "%.1f" | format(100 * mechanical) }}%.
+  </p>
+
+  <p class="muted">Seed {{ game.seed }}</p>
+  <form method="post" action="/sweep/games">
+    <input type="hidden" name="mode" value="{{ game.mode.value }}">
+    <button type="submit" class="primary">Play again</button>
+  </form>
+</section>
+{% endblock %}
+{% block scripts %}<script src="/static/reveal.js" defer></script>{% endblock %}

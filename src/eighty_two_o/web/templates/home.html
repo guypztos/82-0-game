@@ -1,7 +1,13 @@
 {% extends "base.html" %}
+{% block credit %}{{ credit }}. {{ sweep_credit }}{% endblock %}
 {% block content %}
 <section class="hero">
-  <h1 class="headline">Can your team go <span class="led">82-0</span>?</h1>
+  <h1 class="headline">Draft from history. Then try to be <span class="led">perfect</span>.</h1>
+  <p class="lede">Two games, one rule: every pick comes from a random real team-season.</p>
+</section>
+
+<section class="game-card" aria-labelledby="game-basketball">
+  <h2 class="game-title" id="game-basketball">Can your team go <span class="led">82-0</span>?</h2>
   <p class="lede">
     Eight rounds. Each round rolls a random real NBA team from any season since 1979-80,
     and you draft one player from that roster: that season's version of him. Pick five
@@ -9,21 +15,48 @@
     teams from history.
   </p>
   <p class="lede">You get two rerolls for the whole draft. Spend them wisely.</p>
+
+  <form method="post" action="/games" class="mode-picker">
+    <button type="submit" name="mode" value="rookie" class="mode-card">
+      <span class="mode-title">Rookie</span>
+      <span class="mode-text">See every player's stat line while you draft.</span>
+    </button>
+    <button type="submit" name="mode" value="legend" class="mode-card">
+      <span class="mode-title">Legend</span>
+      <span class="mode-text">Names and positions only. Stats are revealed after the draft.</span>
+    </button>
+    <details class="seed">
+      <summary>Use a specific seed</summary>
+      <label>Seed <input type="text" name="seed" inputmode="numeric" placeholder="random"></label>
+      <p class="muted">The same seed with the same picks always plays the same season.</p>
+    </details>
+  </form>
 </section>
 
-<form method="post" action="/games" class="mode-picker">
-  <button type="submit" name="mode" value="rookie" class="mode-card">
-    <span class="mode-title">Rookie</span>
-    <span class="mode-text">See every player's stat line while you draft.</span>
-  </button>
-  <button type="submit" name="mode" value="legend" class="mode-card">
-    <span class="mode-title">Legend</span>
-    <span class="mode-text">Names and positions only. Stats are revealed after the draft.</span>
-  </button>
-  <details class="seed">
-    <summary>Use a specific seed</summary>
-    <label>Seed <input type="text" name="seed" inputmode="numeric" placeholder="random"></label>
-    <p class="muted">The same seed with the same picks always plays the same season.</p>
-  </details>
-</form>
+<section class="game-card" aria-labelledby="game-sweep">
+  <h2 class="game-title" id="game-sweep"><span class="led">Clean Sweep</span>: win every race</h2>
+  <p class="lede">
+    Seven rounds. Each round rolls a real race-winning team from a season between 1980 and
+    2025, and you take one thing from it: its engine, its chassis, its reliability, its pit
+    crew or one of its drivers. Build one car from four different eras, sign two race drivers
+    and a reserve, then race 20 times, each time against the full field of a different season.
+  </p>
+  <p class="lede">Two rerolls for the whole draft. Win all 20 for a clean sweep.</p>
+
+  <form method="post" action="/sweep/games" class="mode-picker">
+    <button type="submit" name="mode" value="rookie" class="mode-card">
+      <span class="mode-title">Rookie</span>
+      <span class="mode-text">See a rating and the real numbers behind every part and driver.</span>
+    </button>
+    <button type="submit" name="mode" value="legend" class="mode-card">
+      <span class="mode-title">Legend</span>
+      <span class="mode-text">Names only. The numbers are revealed once your team is set.</span>
+    </button>
+    <details class="seed">
+      <summary>Use a specific seed</summary>
+      <label>Seed <input type="text" name="seed" inputmode="numeric" placeholder="random"></label>
+      <p class="muted">The same seed with the same picks always races the same season.</p>
+    </details>
+  </form>
+</section>
 {% endblock %}

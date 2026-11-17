@@ -8,7 +8,7 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="logo" href="/"><span class="led">82-0</span></a>
+    <a class="logo" href="/"><span class="led">{% block logo %}82-0{% endblock %}</span></a>
     {% if game is defined and game %}
       <span class="mode-badge">{{ game.mode.value | capitalize }} mode</span>
     {% endif %}
@@ -19,7 +19,7 @@
     {% endif %}
     {% block content %}{% endblock %}
   </main>
-  <footer class="site-footer">{{ credit }}</footer>
+  <footer class="site-footer">{% block credit %}{{ credit }}{% endblock %}</footer>
   {% block scripts %}{% endblock %}
 </body>
 </html>

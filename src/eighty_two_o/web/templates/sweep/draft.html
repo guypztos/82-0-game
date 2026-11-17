@@ -1,0 +1,122 @@
+{% extends "sweep/_layout.html" %}
+{% from "sweep/_items.html" import part_cells, driver_cells with context %}
+{% block title %}Pick {{ pick_number + 1 }} of {{ rounds }} · Clean Sweep{% endblock %}
+{% block content %}
+{% set show = game.stats_visible %}
+{% set car = board.car %}
+<section class="board">
+  <p class="eyebrow">Pick <span class="led">{{ pick_number + 1 }}</span> of {{ rounds }}</p>
+  <h1 class="team-header">
+    <span class="team-season">{{ car.year }}</span>
+    <span class="team-name">{{ car.name }} {{ car.chassis_name }}</span>
+  </h1>
+  <p class="muted">{{ car.full_label }}</p>
+  {% if show %}
+    <p class="muted">
+      Real season: {{ car.wins }} of {{ car.races }} races won
+      {%- if car.championship_position %}, {{ car.championship_position | ordinal }} in the constructors' standings{% endif %}.
+    </p>
+  {% endif %}
+  <form method="post" action="/sweep/games/{{ game.id }}/reroll" class="reroll">
+    <input type="hidden" name="pick_number" value="{{ pick_number }}">
+    <button type="submit" class="secondary" {% if rerolls_left == 0 %}disabled{% endif %}>
+      Reroll team ({{ rerolls_left }} left)
+    </button>
+  </form>
+</section>
+
+<div class="draft-layout">
+  <div class="board-tables">
+    <section class="table-wrap" aria-label="Parts">
+      <table class="roster parts">
+        <thead>
+          <tr>
+            <th>Part</th>
+            <th>From</th>
+            {% if show %}<th class="num">Rating</th>{% endif %}
+            <th><span class="visually-hidden">Take</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for option in board.parts %}
+            <tr class="{{ '' if option.available else 'unavailable' }}">
+              {{ part_cells(option.slot, car, show) }}
+              <td class="action">
+                {% if option.available %}
+                  <form method="post" action="/sweep/games/{{ game.id }}/pick">
+                    <input type="hidden" name="item" value="{{ option.slot.value }}">
+                    <input type="hidden" name="pick_number" value="{{ pick_number }}">
+                    <button type="submit">Take</button>
+                  </form>
+                {% else %}
+                  <span class="tag">Filled: {{ part_name(option.slot, option.held) }}</span>
+                {% endif %}
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </section>
+
+    <section class="table-wrap" aria-label="Drivers">
+      <table class="roster drivers">
+        <thead>
+          <tr>
+            <th>Driver</th>
+            {% if show %}<th class="num">Rating</th>{% endif %}
+            <th><span class="visually-hidden">Take</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for option in drivers %}
+            <tr class="{{ '' if option.available else 'unavailable' }}">
+              {{ driver_cells(option.card, show) }}
+              <td class="action">
+                {% if option.available %}
+                  <form method="post" action="/sweep/games/{{ game.id }}/pick">
+                    <input type="hidden" name="item" value="driver:{{ option.card.card_id }}">
+                    <input type="hidden" name="pick_number" value="{{ pick_number }}">
+                    <button type="submit">Take</button>
+                  </form>
+                {% elif game.draft.seats_full %}
+                  <span class="tag">Seats full</span>
+                {% else %}
+                  <span class="tag">Already yours</span>
+                {% endif %}
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <aside class="picks" aria-label="Your team">
+    <h2>Your team</h2>
+    <ol class="pick-list slot-list">
+      {% for slot in part_slots %}
+        {% set held = game.draft.part(slot) %}
+        <li class="{{ '' if held else 'empty' }}">
+          <span class="slot-label">{{ slot.label }}</span>
+          {% if held %}
+            <span class="card-name">{{ part_name(slot, held) }}</span>
+            {% if show %}<span class="card-stat"><span class="rating">{{ part_rating(slot, held) }}</span></span>{% endif %}
+          {% else %}
+            Open slot
+          {% endif %}
+        </li>
+      {% endfor %}
+      {% for d in game.draft.drivers %}
+        <li>
+          <span class="slot-label">Driver</span>
+          <span class="card-name">{{ d.label }}</span>
+          {% if show %}<span class="card-stat"><span class="rating">{{ driver_rating(d) }}</span></span>{% endif %}
+        </li>
+      {% endfor %}
+      {% for _ in range(3 - game.draft.drivers | length) %}
+        <li class="empty"><span class="slot-label">Driver</span> Open slot</li>
+      {% endfor %}
+    </ol>
+  </aside>
+</div>
+{% endblock %}

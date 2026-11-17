@@ -1,0 +1,50 @@
+{% extends "sweep/_layout.html" %}
+{% from "sweep/_items.html" import part_cells, driver_cells with context %}
+{% block title %}Choose your reserve · Clean Sweep{% endblock %}
+{% block content %}
+{% set show = game.stats_visible %}
+<section class="board">
+  <p class="eyebrow">Draft complete</p>
+  <h1 class="team-header"><span class="team-name">Choose your reserve</span></h1>
+  <p class="muted">
+    Two drivers race every weekend. The reserve steps in when one of them misses a race,
+    which happens now and then.
+  </p>
+</section>
+
+<section class="table-wrap" aria-label="Your car">
+  <table class="roster parts">
+    <thead>
+      <tr><th>Part</th><th>From</th>{% if show %}<th class="num">Rating</th>{% endif %}</tr>
+    </thead>
+    <tbody>
+      {% for slot in part_slots %}
+        <tr>{{ part_cells(slot, game.draft.part(slot), show) }}</tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+
+<form method="post" action="/sweep/games/{{ game.id }}/lineup">
+  <div class="table-wrap">
+    <table class="roster drivers">
+      <thead>
+        <tr><th>Reserve</th><th>Driver</th>{% if show %}<th class="num">Rating</th>{% endif %}</tr>
+      </thead>
+      <tbody>
+        {% for d in game.draft.drivers %}
+          <tr>
+            <td>
+              <input type="radio" name="reserve" value="{{ d.card_id }}" id="reserve-{{ loop.index }}"
+                     {% if loop.last %}checked{% endif %}>
+              <label for="reserve-{{ loop.index }}" class="visually-hidden">Reserve: {{ d.name }}</label>
+            </td>
+            {{ driver_cells(d, show) }}
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <button type="submit" class="primary">Start the season</button>
+</form>
+{% endblock %}

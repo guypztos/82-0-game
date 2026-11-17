@@ -1,0 +1,18 @@
+{# Rows for the parts and drivers of a Clean Sweep team. Numbers only when `show` is true. #}
+{% macro part_cells(slot, car, show) %}
+  <th scope="row">{{ slot.label }}</th>
+  <td class="name">
+    <span class="card-name">{{ part_name(slot, car) }}</span>
+    {% if show %}<span class="card-meta">{{ part_line(slot, car) }}</span>{% endif %}
+  </td>
+  {% if show %}<td class="num"><span class="rating">{{ part_rating(slot, car) }}</span></td>{% endif %}
+{% endmacro %}
+
+{% macro driver_cells(d, show) %}
+  <td class="name">
+    <span class="card-name">{{ d.label }}</span>
+    <span class="card-meta">{{ car_of(d.car_key).name }}</span>
+    {% if show %}<span class="card-meta">{{ driver_line(d) }}</span>{% endif %}
+  </td>
+  {% if show %}<td class="num"><span class="rating">{{ driver_rating(d) }}</span></td>{% endif %}
+{% endmacro %}

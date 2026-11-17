@@ -578,3 +578,66 @@ tr.unavailable {
     animation: none;
   }
 }
+
+/* --- Clean Sweep -------------------------------------------------------- */
+
+.game-card {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.game-title {
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--text);
+}
+
+.board-tables {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+
+.rating {
+  display: inline-block;
+  min-width: 3ch;
+  padding: 0 6px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-family: var(--mono);
+  font-weight: 700;
+  text-align: center;
+  color: var(--led);
+}
+
+.slot-label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.result.race {
+  grid-template-columns: 3ch 17ch minmax(0, 1fr) 2ch;
+}
+
+.result-field {
+  color: var(--muted);
+}
+
+.result-detail {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 760px) {
+  .result.race {
+    grid-template-columns: 3ch minmax(0, 1fr);
+  }
+
+  .result.race .result-detail {
+    grid-column: 2;
+  }
+}

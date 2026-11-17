@@ -9,6 +9,9 @@ dist/
 .venv/
 .env
 
+# Downloaded source data (tools/build_dataset.py)
+.cache/
+
 # Tool caches
 .mypy_cache/
 .pytest_cache/
